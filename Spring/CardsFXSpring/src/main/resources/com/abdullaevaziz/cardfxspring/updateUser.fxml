@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.cardfxspring.controllers.usercontroller.UpdateUser">
+
+    <children>
+        <Label layoutX="205.0" layoutY="8.0" prefHeight="31.0" prefWidth="181.0" text="Ввод данных для обновления пользователя" />
+        <Label fx:id="nameLabel" layoutX="352.0" layoutY="76.0" prefHeight="31.0" prefWidth="149.0" text="Имя  пользователя" />
+        <TextField fx:id="nameTextField" layoutX="352.0" layoutY="117.0" />
+        <Label fx:id="loginLabel" layoutX="56.0" layoutY="76.0" prefHeight="31.0" prefWidth="149.0" text="Логин пользователя" />
+        <TextField fx:id="loginTextField" layoutX="56.0" layoutY="117.0" />
+        <Label fx:id="passwordLabel" layoutX="56.0" layoutY="173.0" prefHeight="31.0" prefWidth="149.0" text="Пароль пользователя" />
+        <TextField fx:id="passwordTextField" layoutX="56.0" layoutY="217.0" />
+        <Label fx:id="dataLabel" layoutX="352.0" layoutY="173.0" prefHeight="31.0" prefWidth="149.0" text="Дата пользователя" />
+        <TextField fx:id="dataTextField" disable="true" layoutX="352.0" layoutY="217.0" />
+        <Button layoutX="14.0" layoutY="288.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="31.0" prefWidth="204.0" text="Обновить и закрыть окно" />
+    </children>
+
+
+</AnchorPane>

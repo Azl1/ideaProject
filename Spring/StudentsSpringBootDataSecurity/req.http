@@ -1,0 +1,250 @@
+### add Student
+POST localhost:8083/student
+content-type:application/json
+
+{
+  "fio" : "Иванов",
+  "age" : 28,
+  "num" : 10,
+  "salary" : 2000
+}
+
+### add Student
+POST localhost:8083/student
+content-type:application/json
+
+{
+  "fio" : "Петров",
+  "age" : 30,
+  "num" : 11,
+  "salary" : 3000
+}
+
+### add Student
+POST localhost:8083/student
+content-type:application/json
+
+{
+  "fio" : "Сидоров",
+  "age" : 31,
+  "num" : 12,
+  "salary" : 4000
+}
+
+### get all Student
+GET localhost:8083/student
+
+### get Student by id
+GET localhost:8083/student/2
+Authorization: Basic Aziz 123
+
+### get Student by incorrect id
+GET localhost:8083/student/100
+
+
+### remove Student by id
+DELETE localhost:8083/student/3
+Authorization: Basic 1 1
+
+### update Student
+PUT localhost:8083/student
+content-type:application/json
+
+{
+  "id" : 2,
+  "fio" : "Березин",
+  "age" : 35,
+  "num" : 12,
+  "salary" : 7000
+}
+
+### update Student
+PUT localhost:8083/student
+content-type:application/json
+
+{
+  "id" : 1,
+  "fio" : "Иванов",
+  "age" : 28,
+  "num" : 10,
+  "salary" : 2000
+
+}
+
+### update Student
+PUT localhost:8083/student
+content-type:application/json
+
+{
+  "id" : 1,
+  "fio" : "Козлов",
+  "age" : 21,
+  "num" : 11,
+  "salary" : 2025
+}
+
+### update Student erorr
+PUT localhost:8083/student
+content-type:application/json
+
+{
+  "id" : 2,
+  "fio" : "Иванов",
+  "age" : 28,
+  "num" : 10,
+  "salary" : 2000
+}
+
+
+
+
+
+
+
+
+
+
+
+### add Auto
+POST localhost:8083/auto/2
+content-type:application/json
+Authorization: Basic 1 1
+
+{
+  "brand" : "Мерс",
+  "power" : 2000,
+  "year" : 2022
+}
+
+### add Auto
+POST localhost:8083/auto/3
+content-type:application/json
+
+{
+  "brand" : "БМВ",
+  "power" : 2000,
+  "year" : 2023
+}
+
+### add Auto
+POST localhost:8083/auto/3
+content-type:application/json
+
+{
+  "brand" : "Лексус",
+  "power" : 3000,
+  "year" : 2025
+}
+
+### add Auto
+POST localhost:8083/auto/3
+content-type:application/json
+
+{
+  "brand" : "KIA",
+  "power" : 2002,
+  "year" : 2024
+}
+
+
+### get all Auto
+GET localhost:8083/auto
+
+### get Auto by id
+GET localhost:8083/auto/3
+
+### get Auto by incorrect id
+GET localhost:8083/auto/100
+
+
+### remove Auto by id
+DELETE localhost:8083/auto/1
+
+### update Auto
+PUT localhost:8083/auto
+content-type:application/json
+
+{
+  "id": 2,
+  "brand": "Лада",
+  "power": 1000,
+  "year": 2024
+}
+
+### update Auto
+PUT localhost:8083/auto
+content-type:application/json
+
+{
+  "id": 2,
+  "brand": "Рено",
+  "power": 15000,
+  "year": 2013
+}
+
+### update Auto
+PUT localhost:8083/auto
+content-type:application/json
+
+{
+  "id": 1,
+  "brand": "Мустанг",
+  "power": 5000,
+  "year": 2025
+}
+
+### update Auto erorr
+PUT localhost:8083/auto
+content-type:application/json
+
+{
+  "id": 2,
+  "brand" : "KIA",
+  "power" : 2002,
+  "year" : 2024
+}
+
+### get Auto by id
+GET localhost:8083/auto/student/3
+
+
+### delete Auto by id
+DELETE localhost:8083/auto/3
+
+
+### req user
+POST http://localhost:8083/user
+content-type: application/json
+
+{
+  "userName": "Aziz",
+  "password": "123"
+}
+
+### req user
+POST http://localhost:8083/user
+content-type: application/json
+
+{
+  "userName": "123",
+  "password": "1233"
+}
+
+### get user
+GET http://localhost:8083/user
+Authorization: Basic Aziz 123
+
+### get user
+GET http://localhost:8083/user
+
+### get user
+GET http://localhost:8083/user
+Authorization: Basic 123 1233
+
+### get user
+GET http://localhost:8083/user
+Authorization: Basic 1 1
+
+### get erorr user
+GET http://localhost:8083/user
+Authorization: Basic 2 2

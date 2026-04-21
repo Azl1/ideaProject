@@ -1,0 +1,169 @@
+### authentification by user
+POST http://localhost:8080/user/authentication?username=Kirill&password=123
+
+### authentification by admin
+POST http://localhost:8080/user/authentication?username=111&password=111
+
+### authentification by admin
+POST http://localhost:8080/user/authentication?username=222&password=222
+
+
+
+### Add admin authentification
+POST http://localhost:8080/user/admin
+content-type:application/json
+Authorization: Bearer {{admin}}
+
+{
+  "login": "111",
+  "name": "111",
+  "password": "111",
+  "userType": "ADMIN"
+}
+
+### authentification by admin
+POST http://localhost:8080/user/admin
+content-type:application/json
+Authorization: Bearer {{admin}}
+
+{
+  "login": "Kirill",
+  "name": "Kirill",
+  "password": "123",
+  "userType": "ADMIN"
+}
+
+
+
+### Add admin not authentification "Authentication error"
+POST http://localhost:8080/user/register
+content-type:application/json
+Authorization: Bearer {{admin}}
+
+{
+  "login": "888",
+  "name": "888",
+  "password": "888",
+  "userType": "USER"
+}
+
+### Add user not authenticated
+POST http://localhost:8080/user/register
+content-type:application/json
+
+{
+  "login": "1555",
+  "name": "1555",
+  "password": "1555"
+}
+
+
+### User "Insufficient privileges"
+POST http://localhost:8080/user/register
+content-type:application/json
+Authorization: Bearer {{admin}}
+
+{
+  "login": "12555",
+  "name": "12555",
+  "password": "12555",
+  "userType": "USER"
+}
+
+### User "Insufficient privileges"
+POST http://localhost:8080/user/admin
+content-type:application/json
+Authorization: Bearer {{admin}}
+
+{
+  "login": "1",
+  "name": "1",
+  "password": "1",
+  "userType": "ADMIN"
+}
+
+### User not authenticated
+POST http://localhost:8080/user/register
+content-type:application/json
+Authorization: Bearer {{user}}
+
+{
+  "login": "124w54755",
+  "name": "12455w745",
+  "password": "1247w4555",
+  "userType": "USER"
+}
+
+### Сreate pathNew admin
+POST localhost:8080/fileSystem/create?path=1/cat&dir=newdir
+Authorization: Bearer {{admin}}
+
+### Get path exists direcory
+GET localhost:8080/fileSystem/exists?path=1
+Authorization: Bearer {{admin}}
+
+### Delete path direcory
+DELETE localhost:8080/fileSystem/delete?path=1
+Authorization: Bearer {{admin}}
+
+### Rename path direcory
+PUT localhost:8080/fileSystem/rename?path=1/cat&newName=dog
+Authorization: Bearer {{admin}}
+
+### Loading path direcory
+POST localhost:8080/fileSystem/loading?path=1/cat
+Authorization: Bearer {{admin}}
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="photo.png"
+
+### Loading path direcory
+POST localhost:8080/fileSystem/loadingList?path=1/cat
+Authorization: Bearer {{admin}}
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="photo.png", filename="1.png"
+
+
+
+### Get Download file path direcory
+GET localhost:8080/fileSystem/downloadFile?filePath=1/cat/2.png
+Authorization: Bearer {{admin}}
+
+
+### Get Download file path direcory (на клиент)
+GET localhost:8080/fileSystem/downloadFile?filePath=1/cat
+Authorization: Bearer {{admin}}
+
+### Get Download file path zip direcory (на клиент)
+GET localhost:8080/fileSystem/fileZip?filePath=1/cat
+Authorization: Bearer {{admin}}
+
+
+
+### Get Information file/path direcory
+GET localhost:8080/fileSystem/informationDirName?dirName=1
+Authorization: Bearer {{admin}}
+
+### Get list files
+GET localhost:8080/fileSystem
+Authorization: Bearer {{admin}}
+
+### Get list users
+GET localhost:8080/user/listUsers
+Authorization: Bearer {{admin}}
+
+
+
+### Get user admin
+# --------------------Users-------------------------------
+GET localhost:8080/user/1
+content-type:application/json
+Authorization: Bearer {{admin}}
+
+### Get user admin
+GET http://localhost:8080/user/1
+
+

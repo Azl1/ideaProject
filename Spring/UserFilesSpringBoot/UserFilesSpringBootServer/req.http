@@ -1,0 +1,47 @@
+### authentification by admin
+POST http://localhost:8080/user/authentication?username=kirill&password=kirill
+
+### authentification by admin
+POST http://localhost:8080/user/authentication?username=1&password=1
+
+
+###
+POST localhost:8080/user
+content-type:application/json
+
+{
+  "login": "kirill",
+  "password": "123",
+  "fio": "kirill k"
+}
+
+###
+POST localhost:8080/user
+content-type:application/json
+
+{
+  "login": "1",
+  "password": "1",
+  "fio": "1"
+}
+
+###
+GET localhost:8080/userFile
+content-type:application/json
+Authorization: Bearer {{user}}
+
+###
+GET localhost:8080/userFile?filename=1.jpg
+Authorization: Bearer {{user}}
+
+
+### post file by id
+POST http://localhost:8080/userFile/2
+Content-Type: multipart/form-data; boundary=boundary
+Authorization: Bearer {{user}}
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="photo.png"
+
+// The 'input.txt' file will be uploaded
+< D:\1.jpg

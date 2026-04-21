@@ -1,0 +1,26 @@
+[
+  {
+    "id": 5858,
+    "name": "Иван",
+    "registrationDate": "12.05.2000 14:20",
+    "email": "twe@bk.ru",
+    "age": 18,
+    "country": "Ближний Восток"
+  },
+  {
+    "id": 8564,
+    "name": "Петр",
+    "registrationDate": "12.05.2005 11:16",
+    "email": "b@yandex.ru",
+    "age": 20,
+    "country": "Египет"
+  },
+  {
+    "id": 2417,
+    "name": "Kirill",
+    "registrationDate": "12.05.2002 15:25",
+    "email": "blackgod.kn-soft@msil.ru",
+    "age": 21,
+    "country": "Ирак"
+  }
+]

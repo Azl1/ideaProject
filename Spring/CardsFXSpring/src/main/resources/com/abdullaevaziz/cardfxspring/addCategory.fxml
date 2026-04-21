@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.cardfxspring.controllers.categorycontrollers.AddCategoryController">
+
+    <children>
+        <Label layoutX="205.0" layoutY="8.0" prefHeight="31.0" prefWidth="181.0" text="Ввод данных категорий" />
+        <Label fx:id="nameLabel" layoutX="187.0" layoutY="95.0" prefHeight="31.0" prefWidth="149.0" text="Назавание категорий " />
+        <TextField fx:id="nameTextField" layoutX="187.0" layoutY="155.0" />
+        <Button layoutX="14.0" layoutY="271.0" mnemonicParsing="false" onAction="#addCategory" prefHeight="64.0" prefWidth="496.0" text="Добавить и закрыть окно" />
+
+    </children>
+
+</AnchorPane>

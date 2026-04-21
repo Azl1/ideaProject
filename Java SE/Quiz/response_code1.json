@@ -1,0 +1,121 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which professional wrestler fell from the rafters to his death during a live Pay-Per-View event in 1999?",
+      "correct_answer": "Owen Hart",
+      "incorrect_answers": [
+        "Chris Benoit",
+        "Lex Luger",
+        "Al Snow"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "How many games did Arsenal FC go unbeaten during the 2003-2004 season of the English Premier League",
+      "correct_answer": "38",
+      "incorrect_answers": [
+        "51",
+        "49",
+        "22"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Tennis was once known as Racquetball.",
+      "correct_answer": "False",
+      "incorrect_answers": [
+        "True"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Who won the 2011 Stanley Cup?",
+      "correct_answer": "Boston Bruins",
+      "incorrect_answers": [
+        "Montreal Canadiens",
+        "New York Rangers",
+        "Toronto Maple Leafs"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which NBA player has the most games played over the course of their career?",
+      "correct_answer": "Robert Parish",
+      "incorrect_answers": [
+        "Kareem Abdul-Jabbar",
+        "Kevin Garnett",
+        "Kobe Bryant"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which country did Kabaddi, a contact sport involving tackling, originate from?",
+      "correct_answer": "India",
+      "incorrect_answers": [
+        "Australia",
+        "Turkey",
+        "Cambodia"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "How many scoring zones are there on a conventional dart board?",
+      "correct_answer": "82",
+      "incorrect_answers": [
+        "62",
+        "42",
+        "102"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "How many premier league trophies did Sir Alex Ferguson win during his time at Manchester United?",
+      "correct_answer": "13",
+      "incorrect_answers": [
+        "11",
+        "20",
+        "22"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Soccer player Cristiano Ronaldo opened a museum dedicated to himself.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which of the following pitchers was named National League Rookie of the Year for the 2013 season?",
+      "correct_answer": "Jose Fernandez",
+      "incorrect_answers": [
+        "Jacob deGrom",
+        "Shelby Miller",
+        "Matt Harvey"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.studentsspringbootdataclient.controllers.autocontrollers.UpdateAutoController">
+    <Label layoutX="205.0" layoutY="8.0" prefHeight="31.0" prefWidth="181.0" text="Ввод данных студента" />
+    <Label fx:id="powerLabel" layoutX="352.0" layoutY="60.0" prefHeight="31.0" prefWidth="149.0" text="Power auto" />
+    <TextField fx:id="powerTextField" layoutX="352.0" layoutY="104.0" />
+    <Label fx:id="brandLabel" layoutX="14.0" layoutY="151.0" prefHeight="31.0" prefWidth="149.0" text="Brand auto" />
+    <TextField fx:id="brandTextField" layoutX="14.0" layoutY="188.0" />
+    <Label fx:id="yearLabel" layoutX="352.0" layoutY="151.0" prefHeight="31.0" prefWidth="149.0" text="Year auto" />
+    <TextField fx:id="yearTextField" layoutX="352.0" layoutY="188.0" />
+    <Label fx:id="idStudentLabel" layoutX="352.0" layoutY="243.0" prefHeight="31.0" prefWidth="149.0" text="Id studenta" />
+    <TextField fx:id="idStudentTextField" disable="true" layoutX="352.0" layoutY="274.0" />
+    <Button layoutX="14.0" layoutY="271.0" mnemonicParsing="false" onAction="#addAuto" prefHeight="31.0" prefWidth="204.0" text="Обновить и закрыть окно" />
+   <Label fx:id="idAutoLabel" layoutX="14.0" layoutY="89.0" prefHeight="31.0" prefWidth="149.0" text="Id auto" />
+   <TextField fx:id="idAutoTextField" disable="true" layoutX="14.0" layoutY="120.0" />
+</AnchorPane>

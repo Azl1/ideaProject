@@ -1,0 +1,29 @@
+### add Book
+POST localhost:8081/orders?email=az@bk.ru
+content-type:application/json
+
+{
+  "productName": "Клавиатура",
+  "quantity": 1,
+  "price": 5000.0,
+  "customerEmail": "user@example.com"
+}
+
+### add Book
+GET localhost:8081/orders
+
+###----------------------------------------------------------
+
+### add Book
+POST localhost:8081/orders?email=lkkz@bk.ru
+content-type:application/json
+
+{
+  "productName": "Клавиатура777",
+  "quantity": 132,
+  "price": 77000.0,
+  "customerEmail": "busers@example123.com"
+}
+
+### add Book
+GET localhost:8082/api/v1/notifications

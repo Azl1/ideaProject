@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kirillkotov.opennewformsjavafxlect.controllers.SecondController">
+   <children>
+      <Label layoutX="62.0" layoutY="49.0" prefHeight="18.0" prefWidth="33.0" text="Brand" />
+      <Label layoutX="61.0" layoutY="111.0" text="Model" />
+      <Label layoutX="35.0" layoutY="173.0" text="Time Expectancy" />
+      <TextField fx:id="textFieldBrand" layoutX="171.0" layoutY="45.0" prefHeight="26.0" prefWidth="374.0" />
+      <TextField fx:id="textFieldTimeExpectancy" layoutX="171.0" layoutY="168.0" prefHeight="26.0" prefWidth="373.0" />
+      <TextField fx:id="textFieldModel" layoutX="171.0" layoutY="107.0" prefHeight="26.0" prefWidth="374.0" />
+      <Button layoutX="494.0" layoutY="228.0" mnemonicParsing="false" onAction="#buttonClose" text="Close" />
+   </children>
+</AnchorPane>

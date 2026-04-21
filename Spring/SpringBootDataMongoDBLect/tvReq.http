@@ -1,0 +1,51 @@
+### add new TV
+POST http://localhost:8080/tvs/69cd6c14b92ca9709120a50e
+content-type:application/json
+
+{
+  "brand" : "Samsung",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### add new TV
+POST http://localhost:8080/tvs/69cd6c14b92ca9709120a50e
+content-type:application/json
+
+{
+  "brand" : "Panasonic",
+  "model" : "E45",
+  "color" : "White",
+  "timeExpectancy" : 10,
+  "price" : 10000,
+  "produceDate" : "14.12.2000"
+}
+
+### get All
+GET http://localhost:8080/tvs
+
+### get by Id
+GET http://localhost:8080/tvs/668422c7873ad33e7d67d07e
+
+### delete TV by Id
+DELETE http://localhost:8080/tvs/6684278224c824315c4053ba
+
+###
+PUT http://localhost:8080/tvs
+content-type:application/json
+
+{
+  "id": "668422ce873ad33e7d67d07f",
+  "brand" : "Panasonic",
+  "model" : "E45",
+  "color" : "Blue",
+  "timeExpectancy" : 15,
+  "price" : 30000,
+  "produceDate" : "14.12.2000"
+}
+
+###
+PUT http://localhost:8080/tvs/updatePrice

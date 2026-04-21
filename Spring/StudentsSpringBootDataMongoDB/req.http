@@ -1,0 +1,205 @@
+### add Student
+POST localhost:8080/student
+content-type:application/json
+
+{
+  "fio" : "Иванов",
+  "age" : 28,
+  "num" : 10,
+  "salary" : 2000
+}
+
+### add Student
+POST localhost:8080/student
+content-type:application/json
+
+{
+  "fio" : "Петров",
+  "age" : 30,
+  "num" : 11,
+  "salary" : 3000
+}
+
+### add Student
+POST localhost:8080/student
+content-type:application/json
+
+{
+  "fio" : "Сидоров",
+  "age" : 31,
+  "num" : 12,
+  "salary" : 4000
+}
+
+### get all Student
+GET localhost:8080/student
+
+### get Student by id
+GET localhost:8080/student/69cd7739ff2e496b1246ba96
+
+### get Student by incorrect id
+GET localhost:8080/student/69cd7c95539df1695c473ceb
+
+
+### remove Student by id
+DELETE localhost:8080/student/69cd7739ff2e496b1246ba96
+
+### update Student
+PUT localhost:8080/student
+content-type:application/json
+
+{
+  "id" : "69cd776bff2e496b1246ba97",
+  "fio" : "Березин",
+  "age" : 35,
+  "num" : 12,
+  "salary" : 7000
+}
+
+### update Student
+PUT localhost:8080/student
+content-type:application/json
+
+{
+  "id" : "69cd776bff2e496b1246ba97",
+  "fio" : "Иванов",
+  "age" : 28,
+  "num" : 10,
+  "salary" : 2000
+
+}
+
+### update Student
+PUT localhost:8080/student
+content-type:application/json
+
+{
+  "id" : "69cd776bff2e496b1246ba97",
+  "fio" : "Козлов",
+  "age" : 21,
+  "num" : 11,
+  "salary" : 2025
+}
+
+### update Student erorr
+PUT localhost:8080/student
+content-type:application/json
+
+{
+  "id" : 2,
+  "fio" : "Иванов",
+  "age" : 28,
+  "num" : 10,
+  "salary" : 2000
+}
+
+
+
+
+
+
+
+
+### add Auto
+POST localhost:8080/auto/69cd81d1b1f9a878e51346d9
+content-type:application/json
+
+{
+  "brand" : "Мерс",
+  "power" : 2000,
+  "year" : 2022
+}
+
+### add Auto
+POST localhost:8080/auto/69cd81d1b1f9a878e51346d9
+content-type:application/json
+
+{
+  "brand" : "БМВ",
+  "power" : 21000,
+  "year" : 2023
+}
+
+### add Auto
+POST localhost:8080/auto/69cd81d1b1f9a878e51346d9
+content-type:application/json
+
+{
+  "brand" : "Лексус111",
+  "power" : 30100,
+  "year" : 20215
+}
+
+### add Auto
+POST localhost:8080/auto/69cd7c95539df1695c473ceb
+content-type:application/json
+
+{
+  "brand" : "KIA",
+  "power" : 2002,
+  "year" : 2024
+}
+
+
+### get all Auto
+GET localhost:8080/auto
+
+### get Auto by id
+GET localhost:8080/auto/69cd801b4fe12a6d7bd17bf8
+
+### get Auto by incorrect id
+GET localhost:8080/auto/69cd7c95539df1695c473ceb
+
+
+### remove Auto by id
+DELETE localhost:8080/auto/69cd7c95539df1695c473ceb
+
+### update Auto
+PUT localhost:8080/auto
+content-type:application/json
+
+{
+  "id": "69cd7cd5539df1695c473cef",
+  "brand": "Лада",
+  "power": 1000,
+  "year": 2024
+}
+
+### update Auto
+PUT localhost:8080/auto
+content-type:application/json
+
+{
+  "id": "69cd7cd5539df1695c473cef",
+  "brand": "Рено",
+  "power": 15000,
+  "year": 2013
+}
+
+### update Auto
+PUT localhost:8080/auto
+content-type:application/json
+
+{
+  "id": "69cd7cd5539df1695c473cef",
+  "brand": "Мустанг",
+  "power": 5000,
+  "year": 2025
+}
+
+### update Auto erorr
+PUT localhost:8080/auto
+content-type:application/json
+
+{
+  "id": "69cd7cd5539df1695c473cef",
+  "brand" : "KIA",
+  "power" : 2002,
+  "year" : 2024
+}
+
+### get Auto by id
+GET localhost:8080/auto/student/69cd7c95539df1695c473ceb
+
+### delete Auto by id
+DELETE localhost:8080/auto/69cd7c95539df1695c473ceb

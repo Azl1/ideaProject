@@ -1,0 +1,3 @@
+2026-04-21 10:00:08.013  WARN 20336 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h22m30s823ms248µs900ns).
+2026-04-21 12:26:09.639  WARN 20336 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m30s410ms866µs100ns).
+2026-04-21 16:42:46.440  WARN 20336 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h49m6s449ms326µs400ns).

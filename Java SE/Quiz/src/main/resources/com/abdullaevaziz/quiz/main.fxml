@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.quiz.controllers.MainController">
+   <children>
+      <Button layoutX="235.0" layoutY="71.0" mnemonicParsing="false" onAction="#buttonLoadingForm" prefHeight="38.0" prefWidth="131.0" text="From Internet" />
+      <Button layoutX="235.0" layoutY="200.0" mnemonicParsing="false" onAction="#buttonGameForm" prefHeight="38.0" prefWidth="131.0" text="From File" />
+      <CheckBox fx:id="checkBox" layoutX="238.0" layoutY="271.0" mnemonicParsing="false" onAction="#buttonShowCorrectAnswers" prefHeight="38.0" prefWidth="125.0" text="Show Correct Answers" />
+   </children>
+</AnchorPane>

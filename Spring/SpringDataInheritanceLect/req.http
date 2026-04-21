@@ -1,0 +1,253 @@
+### add new cat
+POST localhost:8080/cat
+content-type: application/json
+
+{
+  "name" : "Vasya",
+  "color" : "Black",
+  "age" : 10,
+  "weight" : 20,
+  "mouseExperience" : 5
+}
+
+### add new cat
+POST localhost:8080/cat
+content-type: application/json
+
+{
+  "name" : "Vitya",
+  "color" : "White",
+  "age" : 5,
+  "weight" : 10,
+  "mouseExperience" : 1
+}
+
+### add new cat constraint incorrect
+POST localhost:8080/cat
+content-type: application/json
+
+{
+  "name" : "Vasya",
+  "color" : "Black",
+  "age" : 10,
+  "weight" : 20,
+  "mouseExperience" : 5
+}
+
+### get all cats
+GET localhost:8080/cat
+
+### add new dog
+POST localhost:8080/dog
+content-type: application/json
+
+{
+  "name" : "Sharik",
+  "color" : "White",
+  "age" : 15,
+  "weight" : 30,
+  "bonesCount" : 5,
+  "ownerNumber" : "+7 999 810 01 68"
+}
+
+### add new dog
+POST localhost:8080/dog
+content-type: application/json
+
+{
+  "name" : "Bax",
+  "color" : "Yellow",
+  "age" : 20,
+  "weight" : 30,
+  "bonesCount" : 5,
+  "ownerNumber" : "+7 999 810 01 69"
+}
+
+### add new dog common constraint incorrect
+POST localhost:8080/dog
+content-type: application/json
+
+{
+  "name" : "Sharik",
+  "color" : "White",
+  "age" : 15,
+  "weight" : 30,
+  "bonesCount" : 5,
+  "ownerNumber" : "+7 999 810 01 68"
+}
+
+### get all dogs
+GET localhost:8080/dog
+
+
+
+
+
+
+
+### add new mammals
+POST localhost:8080/mammal
+content-type: application/json
+
+{
+  "type": "cat",
+  "id": 1,
+  "name": "Пузик",
+  "color": "Зеленый",
+  "age": 572,
+  "weight": 555.5,
+  "mouseExperience": 573
+
+}
+
+### add new mammals
+POST localhost:8080/mammal
+content-type: application/json
+
+{
+  "type": "cat",
+  "id": 1,
+  "name": "Барсик",
+  "color": "серый",
+  "age": 2,
+  "weight": 4.5,
+  "mouseExperience": 3
+
+}
+
+### add new mammals
+POST localhost:8080/mammal
+content-type: application/json
+
+{
+  "type": "dog",
+  "id": 1,
+  "name": "Бобик",
+  "color": "рыжий",
+  "age": 5,
+  "weight": 10.5,
+  "bonesCount": 3,
+  "ownerNumber": "123456"
+}
+
+### add new mammals
+POST localhost:8080/mammal
+content-type: application/json
+
+{
+  "type": "dog",
+  "id": 1,
+  "name": "Лёлик",
+  "color": "Синий",
+  "age": 7,
+  "weight": 11.5,
+  "bonesCount": 5,
+  "ownerNumber": "1123456"
+}
+
+### get all mammals
+GET localhost:8080/mammal
+
+### get all mammals
+GET localhost:8080/mammal/1
+
+### delete all mammals
+DELETE localhost:8080/mammal/2
+
+### put new mammals
+PUT localhost:8080/mammal
+content-type: application/json
+
+{
+  "type": "dog",
+  "id": 4,
+  "name": "Вобер",
+  "color": "бежевый",
+  "age": 15,
+  "weight": 11.5,
+  "bonesCount": 11,
+  "ownerNumber": "1527345168"
+}
+
+### put new mammals
+PUT localhost:8080/mammal
+content-type: application/json
+
+{
+  "type": "cat",
+  "id": 4,
+  "name": "7Мурка",
+  "color": "7серый",
+  "age": 73,
+  "weight": 74.2,
+  "mouseExperience": 787
+}
+
+
+
+
+### post new mammals
+POST localhost:8080/mammal
+Content-Type: application/json
+
+{
+"type": "dog",
+"name": "Вобер",
+"color": "бежевый",
+"age": 15,
+"weight": 11.5,
+"bonesCount": 11,
+"ownerNumber": "152345168"
+}
+
+### post new mammals
+POST localhost:8080/mammal
+Content-Type: application/json
+
+{
+  "type": "dog",
+  "name": "Вопер",
+  "color": "бежевыйс",
+  "age": 115,
+  "weight": 11.15,
+  "bonesCount": 111,
+  "ownerNumber": "1523451168"
+}
+
+
+
+
+
+
+
+
+
+### add new pen
+POST localhost:8080/pen
+content-type: application/json
+
+{
+  "name": "Brauberg Slim",
+  "producedDate": "15.10.2023 11:26:51",
+  "price": 86.00,
+  "color": "blue"
+}
+
+### get all pens
+GET localhost:8080/pen
+
+### add new book
+POST localhost:8080/book
+content-type: application/json
+
+{
+  "name": "War and Piece",
+  "producedDate": "16.09.2023 09:21:08",
+  "price": 1000.00,
+  "author": "L.N.Tolstoy"
+}
+
+### get all books
+GET localhost:8080/book
+
+

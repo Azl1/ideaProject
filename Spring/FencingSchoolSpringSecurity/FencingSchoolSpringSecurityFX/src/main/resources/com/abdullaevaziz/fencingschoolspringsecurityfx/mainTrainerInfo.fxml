@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.fencingschoolspringsecurityfx.controllers.MainTrainerInfoController">
+   <children>
+      <Label layoutX="14.0" layoutY="114.0" prefHeight="24.0" prefWidth="88.0" text="Фамилия" />
+      <TextField fx:id="textFiledFirstName" layoutX="102.0" layoutY="113.0" />
+      <Label layoutX="14.0" layoutY="150.0" prefHeight="24.0" prefWidth="88.0" text="Имя" />
+      <TextField fx:id="textFiledName" layoutX="102.0" layoutY="149.0" />
+      <Label layoutX="14.0" layoutY="188.0" prefHeight="24.0" prefWidth="88.0" text="Отчество" />
+      <TextField fx:id="textFiledPatronymic" layoutX="102.0" layoutY="187.0" />
+      <Label layoutX="14.0" layoutY="262.0" prefHeight="24.0" prefWidth="88.0" text="Опыт работы" />
+      <TextField fx:id="textFiledExperience" layoutX="102.0" layoutY="261.0" />
+      <Label layoutX="365.0" layoutY="37.0" prefHeight="24.0" prefWidth="150.0" text="Расписание тренера" />
+      <Button layoutX="13.0" layoutY="323.0" mnemonicParsing="false" onAction="#buttonUpdateTrainer" prefHeight="64.0" prefWidth="239.0" text="Обновить тренера" />
+      <Button layoutX="279.0" layoutY="287.0" mnemonicParsing="false" onAction="#buttonAddRecord" prefHeight="100.0" prefWidth="140.0" text="Добавить запись" />
+      <Button layoutX="445.0" layoutY="287.0" mnemonicParsing="false" onAction="#buttonRemoveRecord" prefHeight="100.0" prefWidth="140.0" text="Удалить запись" />
+      <TableView fx:id="scheduleTable" layoutX="264.0" layoutY="75.0" prefHeight="200.0" prefWidth="331.0">
+          <columns>
+              <TableColumn fx:id="dayColumn" prefWidth="110" text="День недели" />
+              <TableColumn fx:id="startTimeColumn" prefWidth="110" text="Начало работы" />
+              <TableColumn fx:id="endTimeColumn" prefWidth="110" text="Конец работы" />
+          </columns>
+      </TableView>
+      <TextField fx:id="textFiledEmail" layoutX="102.0" layoutY="295.0" />
+      <Label fx:id="EmailLabel" layoutX="14.0" layoutY="296.0" prefHeight="24.0" prefWidth="88.0" text="Email" />
+      <Label layoutX="14.0" layoutY="75.0" prefHeight="24.0" prefWidth="88.0" text="Логин" />
+      <TextField fx:id="textFiledLogin" layoutX="102.0" layoutY="74.0" />
+      <Label layoutX="14.0" layoutY="225.0" prefHeight="24.0" prefWidth="88.0" text="Пароль" />
+      <TextField fx:id="textFiledPassword" layoutX="102.0" layoutY="224.0" />
+      <Label layoutX="14.0" layoutY="37.0" prefHeight="24.0" prefWidth="88.0" text="ID" />
+      <TextField fx:id="textFiledID" disable="true" layoutX="102.0" layoutY="36.0" />
+   </children>
+</AnchorPane>

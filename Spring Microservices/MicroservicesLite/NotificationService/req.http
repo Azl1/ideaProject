@@ -1,0 +1,24 @@
+### add Book
+POST localhost:8082/api/v1/notifications
+content-type:application/json
+
+{
+    "id": 1,
+    "orderId": 1,
+    "email": "user@example.com"
+
+}
+
+### add Book
+POST localhost:8082/api/v1/notifications
+content-type:application/json
+
+{
+  "id": 2,
+  "orderId": 2,
+  "email": "user111@example.com"
+
+}
+
+### add Book
+GET localhost:8082/api/v1/notifications

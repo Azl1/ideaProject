@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "brand": "Samsung",
+    "model": "K900",
+    "timeExpectancy": 10,
+    "price": 2000.0
+  },
+  {
+    "id": 2,
+    "brand": "Telefunken",
+    "model": "U90",
+    "timeExpectancy": 20,
+    "price": 20000.0
+  }
+]

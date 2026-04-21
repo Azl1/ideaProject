@@ -1,0 +1,32 @@
+2026-04-21 00:03:33.352  WARN 26580 --- [http-nio-8081-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'email' for method parameter type String is not present]
+2026-04-21 00:03:37.721  INFO 26580 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21 00:03:37.722  INFO 26580 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-21 00:03:37.725  INFO 26580 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-21 00:03:42.102  INFO 31648 --- [main] org.abdullaevaziz.Main                   : Starting Main using Java 19.0.2 on AA_PC with PID 31648 (C:\Users\abdul\IdeaProjects\Spring Microservices\MicroservicesLite\OrderService\target\classes started by abdul in C:\Users\abdul\IdeaProjects\Spring Microservices\MicroservicesLite\OrderService)
+2026-04-21 00:03:42.103  INFO 31648 --- [main] org.abdullaevaziz.Main                   : No active profile set, falling back to default profiles: default
+2026-04-21 00:03:42.420  INFO 31648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-21 00:03:42.440  INFO 31648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
+2026-04-21 00:03:42.504  INFO 31648 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1e440c28-4d81-3c45-929d-55c7e2254712
+2026-04-21 00:03:42.638  INFO 31648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-04-21 00:03:42.643  INFO 31648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-21 00:03:42.643  INFO 31648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2026-04-21 00:03:42.686  INFO 31648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-21 00:03:42.686  INFO 31648 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 563 ms
+2026-04-21 00:03:42.760  INFO 31648 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-21 00:03:42.777  INFO 31648 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2026-04-21 00:03:42.820  INFO 31648 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-04-21 00:03:42.855  INFO 31648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-21 00:03:43.000  INFO 31648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-21 00:03:43.007  INFO 31648 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2026-04-21 00:03:43.245  INFO 31648 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-04-21 00:03:43.248  INFO 31648 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21 00:03:43.374  WARN 31648 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-21 00:03:43.571  INFO 31648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-04-21 00:03:43.594  INFO 31648 --- [main] org.abdullaevaziz.Main                   : Started Main in 1.682 seconds (JVM running for 3.656)
+2026-04-21 00:03:44.530  INFO 31648 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-21 00:03:44.530  INFO 31648 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-21 00:03:44.531  INFO 31648 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-21 00:03:44.569  WARN 31648 --- [http-nio-8081-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'email' for method parameter type String is not present]
+2026-04-21 10:00:14.424  WARN 31648 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h22m30s829ms305µs300ns).
+2026-04-21 12:26:16.125  WARN 31648 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m30s413ms619µs201ns).
+2026-04-21 16:42:22.920  WARN 31648 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h49m6s439ms149µs900ns).

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.abdullaevaziz.fencingschoolfx.controllers.ScheduleAddRecordController">
+   <children>
+      <ComboBox fx:id="dayOfTheWeekBox" layoutX="36.0" layoutY="79.0" prefWidth="150.0" />
+      <Label layoutX="36.0" layoutY="50.0" prefHeight="26.0" prefWidth="150.0" text="День недели" />
+      <Label layoutX="225.0" layoutY="50.0" prefHeight="26.0" prefWidth="150.0" text="Время начало работы" />
+      <ComboBox fx:id="timeStartBox" layoutX="225.0" layoutY="79.0" prefWidth="150.0" />
+      <Label layoutX="405.0" layoutY="50.0" prefHeight="26.0" prefWidth="150.0" text="Время окончание работы" />
+      <ComboBox fx:id="timeEndBox" layoutX="405.0" layoutY="79.0" prefWidth="150.0" />
+      <Button layoutX="225.0" layoutY="164.0" mnemonicParsing="false" onAction="#addRecordButton" prefHeight="44.0" prefWidth="150.0" text="Добавить" />
+   </children>
+</AnchorPane>

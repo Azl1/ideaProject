@@ -1,0 +1,1183 @@
+
+### authentification by admin
+POST http://localhost:8080/user/authentication?username=222&password=222
+
+### authentification by admin
+POST http://localhost:8080/user/authentication?username=8&password=8
+
+### authentification by admin
+POST http://localhost:8080/user/authentication?username=555&password=555
+
+
+
+### Get user admin
+# --------------------Users-------------------------------
+
+GET localhost:8080/user
+content-type:application/json
+Authorization: Bearer_{{admin}}
+
+### Get user trainer
+GET http://localhost:8080/user/1
+Authorization: Bearer_{{admin}}
+Content-Type: application/json
+
+
+### Get user aprantice
+GET localhost:8080/user/1
+content-type:application/json
+Authorization: Bearer_{{trainer}}
+
+### Get user "Incorrect login or password"
+GET localhost:8080/user/1
+content-type:application/json
+Authorization: Basic 2522 2522
+
+### GET user by request login and password
+GET localhost:8080/user
+content-type:application/json
+Authorization: Basic 222 222
+
+### GET "User not found"
+GET localhost:8080/user/100
+
+### Delete user
+DELETE localhost:8080/user/4
+Authorization: Basic admin3 222
+
+
+### Add admin
+# --------------------Admin-------------------------------
+
+POST localhost:8080/admin
+content-type:application/json
+
+{
+  "type": "admin",
+  "login": "kirill",
+  "surname": "Kotov",
+  "name": "Kirill",
+  "patronymic": "1",
+  "password": "123",
+  "email": "kirill@email",
+  "salary": 1
+}
+
+### Add admin
+POST localhost:8080/admin
+content-type:application/json
+
+{
+  "type": "admin",
+  "login": "1",
+  "surname": "1",
+  "name": "1",
+  "patronymic": "1",
+  "password": "1",
+  "email": "1",
+  "salary": 1
+}
+
+
+### Add admin
+POST localhost:8080/admin
+content-type:application/json
+
+{
+  "type": "admin",
+  "login": "admin1",
+  "surname": "Ivanov",
+  "name": "Ivan",
+  "patronymic": "Ivanovich",
+  "password": "12345",
+  "email": "admin@example.com",
+  "salary": 1000.50
+}
+
+### Add admin
+POST localhost:8080/admin
+content-type:application/json
+
+{
+"type": "admin",
+"login": "admin2",
+"surname": "Petrov",
+"name": "Petr",
+"patronymic": "Petrovich",
+"password": "111",
+"email": "admin111@example.com",
+"salary": 1011.10
+}
+
+### Add admin
+POST localhost:8080/admin
+content-type:application/json
+
+{
+  "type": "admin",
+  "login": "admin3",
+  "surname": "Sidorov",
+  "name": "Sidor",
+  "patronymic": "Sidorovich",
+  "password": "222",
+  "email": "111admin@example.com",
+  "salary": 2055.70
+}
+
+### Add admin has already added!
+POST localhost:8080/admin
+content-type:application/json
+
+{
+  "type": "admin",
+  "login": "admin3",
+  "surname": "Sidorov",
+  "name": "Sidor",
+  "patronymic": "Sidorovich",
+  "password": "1234567",
+  "email": "111admin@example.com",
+  "salary": 2055.70
+}
+
+### Add admin "Incorrect login or password"
+POST localhost:8080/admin
+content-type:application/json
+Authorization: Basic admin1 12345
+
+{
+  "type": "admin",
+  "login": "111",
+  "surname": "111",
+  "name": "111",
+  "patronymic": "111",
+  "password": "111",
+  "email": "111@example.com",
+  "salary": 111.11
+}
+
+### Add admin "Authentication error"
+POST localhost:8080/admin
+content-type:application/json
+
+{
+  "type": "admin",
+  "login": "222",
+  "surname": "222",
+  "name": "222",
+  "patronymic": "222",
+  "password": "222",
+  "email": "222@example.com",
+  "salary": 222.22
+}
+
+### Add admin has already added
+POST localhost:8080/admin
+content-type:application/json
+
+{
+  "type": "admin",
+  "login": "222",
+  "surname": "222",
+  "name": "222",
+  "patronymic": "222",
+  "password": "222",
+  "email": "222@example.com",
+  "salary": 222.22
+}
+
+### Get admin list
+GET localhost:8080/admin
+Authorization: Basic admin3 222
+
+### Get admin list
+GET localhost:8080/admin
+Authorization: Basic admin3 222
+
+### Get admin list "Incorrect login or password"
+GET localhost:8080/admin
+Authorization: Basic admin777 1234577
+
+### Admin get id
+GET localhost:8080/admin/1
+Authorization: Basic 222 222
+
+### Admin get id "Incorrect login or password"
+GET localhost:8080/admin/1
+Authorization: Basic admin777 1234577
+
+### Admin does not exists
+GET localhost:8080/admin/1
+Authorization: Basic admin3 222
+
+### Admin put
+PUT localhost:8080/admin
+content-type:application/json
+Authorization: Basic kirill 123
+
+{
+  "id": 1,
+  "type": "admin",
+  "login": "kirill",
+  "surname": "Kotov",
+  "name": "Kirill",
+  "patronymic": "1",
+  "password": "1234",
+  "email": "kirill@email",
+  "salary": 1
+}
+
+### Add admin
+PUT localhost:8080/admin
+content-type:application/json
+Authorization: Basic kirill 123
+
+{
+  "id": 2,
+  "type": "admin",
+  "login": "1",
+  "surname": "1",
+  "name": "1",
+  "patronymic": "1",
+  "password": "2",
+  "email": "1",
+  "salary": 1
+}
+
+### Admin put does not exists
+PUT localhost:8080/admin
+content-type:application/json
+Authorization: Basic kirill 123
+
+{
+  "id": 4,
+  "type": "admin",
+  "login": "admin3",
+  "surname": "Berezin",
+  "name": "Berezka",
+  "patronymic": "Berezovich",
+  "password": "167",
+  "email": "admintrator@example.com",
+  "salary": 3055.70
+}
+
+### Admin put does not exists
+PUT localhost:8080/admin
+content-type:application/json
+Authorization: Basic kirill 123
+
+{
+  "id": 4,
+  "type": "admin",
+  "login": "ad345min3",
+  "surname": "Berez345in",
+  "name": "Ber354ezka",
+  "patronymic": "Ber345ezovich",
+  "password": "163457",
+  "email": "admint354rator@example.com",
+  "salary": 34055.70
+}
+
+### Admin put "Incorrect login or password"
+PUT localhost:8080/admin
+content-type:application/json
+Authorization: Basic kirill 123
+
+{
+  "id": 1,
+  "type": "admin",
+  "login": "admin3",
+  "surname": "Berezin",
+  "name": "Berezka",
+  "patronymic": "Berezovich",
+  "password": "167",
+  "email": "admintrator@example.com",
+  "salary": 3055.70
+}
+
+### Admin delete
+DELETE localhost:8080/admin/19
+Authorization: Basic 111 111
+
+### Admin does not exists
+DELETE localhost:8080/admin/17
+Authorization: Basic admin3 222
+
+### Admin "Incorrect login or password"
+DELETE localhost:8080/admin/1
+Authorization: Basic admin777 1234577
+
+### Add apprentice Authorization
+# --------------------Apprentice-------------------------------
+
+POST localhost:8080/apprentice
+content-type:application/json
+Authorization: Basic kirill 123
+
+{
+  "type": "apprentice",
+  "login": "apprentice1",
+  "surname": "Petrov",
+  "name": "Alex",
+  "patronymic": "Sergeevich",
+  "password": "secure123",
+  "phoneNumber": "+79161234567"
+}
+
+### Add user trainer1
+POST localhost:8080/apprentice
+content-type:application/json
+Authorization: Basic kirill 123
+
+{
+  "type": "apprentice",
+  "login": "apprentice2",
+  "surname": "Смирнова",
+  "name": "Анна",
+  "patronymic": "Владимировна",
+  "password": "anna2023",
+  "phoneNumber": "+79269876543",
+  "skillLevel": "Новичок",
+  "regDate": "15.03.2005"
+}
+
+### Add user apprentice
+POST localhost:8080/apprentice
+content-type:application/json
+Authorization: Basic kirill 123
+
+{
+  "type": "apprentice",
+  "login": "hiy",
+  "surname": "Иванова",
+  "name": "Мария",
+  "patronymic": "Дмитриевна",
+  "password": "maria2008",
+  "phoneNumber": "+1",
+  "regDate": "10.09.2008",
+  "parentContact": "+79167771234"
+}
+
+### Apprentice has already added
+POST localhost:8080/apprentice
+content-type:application/json
+Authorization: Basic kirill 123
+
+{
+  "type": "apprentice",
+  "login": "teen_fencer",
+  "surname": "Иванова",
+  "name": "Мария",
+  "patronymic": "Дмитриевна",
+  "password": "maria2008",
+  "phoneNumber": "+79163456789",
+  "regDate": "10.09.2008",
+  "parentContact": "+79167771234"
+}
+
+### Apprentice has already added
+POST localhost:8080/apprentice
+content-type:application/json
+Authorization: Basic kirill 123
+
+{
+  "type": "apprentice",
+  "login": "8",
+  "surname": "8",
+  "name": "8",
+  "patronymic": "8",
+  "password": "8",
+  "phoneNumber": "8"
+}
+
+### Get admin list apprentice
+GET localhost:8080/apprentice
+Authorization: Basic admin3 222
+
+### Get trainer list apprentice
+GET localhost:8080/apprentice
+Authorization: Basic trainer1 trainer_pass123
+
+### Get list apprentice "Insufficient privileges"
+GET localhost:8080/apprentice
+Authorization: Basic apprentice1 secure123
+
+### Get id apprentice admin user
+GET localhost:8080/apprentice/7
+Authorization: Basic admin3 222
+
+### Get id apprentice trainer user
+GET localhost:8080/apprentice/55
+Authorization: Basic trainer1 trainer_pass123
+
+### Get id apprentice user
+GET localhost:8080/apprentice/
+Authorization: Basic apprentice1 secure123
+
+### Get id apprentice user "Apprentice does not match user id authentication"
+GET localhost:8080/apprentice/8
+Authorization: Bearer_{{apprentice}}
+
+### Get list apprentice does not exists
+GET localhost:8080/apprentice/100
+Authorization: Basic admin3 222
+
+### Put apprentice admin
+PUT localhost:8080/apprentice
+content-type:application/json
+Authorization: Basic admin3 222
+
+{
+  "id": 20,
+  "type": "apprentice",
+  "login": "7",
+  "surname": "7",
+  "name": "7",
+  "patronymic": "7",
+  "password": "7",
+  "phoneNumber": "+7",
+  "regDate": "10.09.2008",
+  "parentContact": "+779167771234"
+}
+
+### Put apprentice user
+PUT localhost:8080/apprentice
+content-type:application/json
+Authorization: Basic apprentice1 secure123
+
+{
+  "id": 7,
+  "type": "apprentice",
+  "login": "7",
+  "surname": "7",
+  "name": "7",
+  "patronymic": "7",
+  "password": "7",
+  "phoneNumber": "+7",
+  "regDate": "10.09.2008",
+  "parentContact": "+779167771234"
+}
+
+### Put apprentice user apprentice by myself "Apprentice does not match user id authentication"
+PUT localhost:8080/apprentice
+content-type:application/json
+Authorization: Basic apprentice2 anna2023
+
+{
+  "id": 7,
+  "type": "apprentice",
+  "login": "7",
+  "surname": "7",
+  "name": "7",
+  "patronymic": "7",
+  "password": "7",
+  "phoneNumber": "+7",
+  "regDate": "10.09.2008",
+  "parentContact": "+779167771234"
+}
+
+### Put apprentice trainer user "Insufficient privileges"
+PUT localhost:8080/apprentice
+content-type:application/json
+Authorization: Basic trainer1 trainer_pass123
+
+{
+  "id": 7,
+  "type": "apprentice",
+  "login": "7",
+  "surname": "7",
+  "name": "7",
+  "patronymic": "7",
+  "password": "7",
+  "phoneNumber": "+7",
+  "regDate": "10.09.2008",
+  "parentContact": "+779167771234"
+}
+
+### Delete apprentice trainer user "Insufficient privileges"
+DELETE localhost:8080/apprentice/9
+Authorization: Basic kirill 123
+
+### Delete apprentice admin user
+DELETE localhost:8080/apprentice/7
+Authorization: Basic admin3 222
+
+### Delete apprentice user
+DELETE localhost:8080/apprentice/7
+Authorization: Basic apprentice1 secure123
+
+### Delete apprentice user "Apprentice does not match user id authentication"
+DELETE localhost:8080/apprentice/7
+Authorization: Basic apprentice2 anna2023
+
+### Delete apprentice "Incorrect login or password"
+DELETE localhost:8080/apprentice/28
+Authorization: Basic 222 222
+
+### Delete apprentice does not exists
+DELETE localhost:8080/apprentice/100
+
+
+### Add trainer
+# --------------------Trainer-------------------------------
+POST localhost:8080/trainer
+content-type:application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "type": "trainer",
+  "login": "1",
+  "surname": "1",
+  "name": "1",
+  "patronymic": "1",
+  "password": "1",
+  "experience": 1,
+  "email": "1"
+}
+
+
+###
+POST localhost:8080/trainer
+content-type:application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "type": "trainer",
+  "login": "trainer1",
+  "surname": "Сидоров",
+  "name": "Дмитрий",
+  "patronymic": "Петрович",
+  "password": "trainer_pass123",
+  "experience": 5,
+  "email": "trainer1@example.com"
+}
+
+### Add trainer
+POST localhost:8080/trainer
+content-type: application/json
+Authorization: Bearer_{{admin}}
+
+{
+"type": "trainer",
+"login": "master_coach",
+"surname": "Иванов",
+"name": "Алексей",
+"patronymic": "Сергеевич",
+"password": "MasterF3nc!ng",
+"experience": 12,
+"email": "master.coach@fencing-school.ru"
+}
+
+### Add trainer
+POST localhost:8080/trainer
+content-type: application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "type": "trainer",
+  "login": "junior_trainer",
+  "surname": "Петрова",
+  "name": "Ольга",
+  "patronymic": "Андреевна",
+  "password": "Olga2023!",
+  "experience": 2,
+  "email": "o.petrova@school.ru"
+}
+
+### Add trainer
+POST localhost:8080/trainer
+content-type: application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "type": "trainer",
+  "login": "555",
+  "surname": "555",
+  "name": "555",
+  "patronymic": "555",
+  "password": "555",
+  "experience": 55,
+  "email": "555@fencing-school.ru"
+}
+
+### Add trainer has already added
+POST localhost:8080/trainer
+content-type: application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "type": "trainer",
+  "login": "junior_trainer",
+  "surname": "Петрова",
+  "name": "Ольга",
+  "patronymic": "Андреевна",
+  "password": "Olga2023!",
+  "experience": 2,
+  "email": "o.petrova@school.ru"
+}
+
+### Add trainer has already added trainer user "Insufficient privileges"
+POST localhost:8080/trainer
+content-type: application/json
+Authorization: Bearer_{{admin}}
+
+{
+  "type": "trainer",
+  "login": "junior_trainer",
+  "surname": "Петрова1",
+  "name": "Ольга1",
+  "patronymic": "Андреевна1",
+  "password": "Olga2023!",
+  "experience": 2,
+  "email": "o.petrova@school.ru"
+}
+
+### Add trainer has already added apprentice user "Insufficient privileges"
+POST localhost:8080/trainer
+content-type: application/json
+Authorization: Basic kirill 123
+
+{
+  "type": "trainer",
+  "login": "junior_trainer",
+  "surname": "Петрова1",
+  "name": "Ольга1",
+  "patronymic": "Андреевна1",
+  "password": "Olga2023!",
+  "experience": 2,
+  "email": "o.petrova@school.ru"
+}
+
+
+### Get list trainer admin
+GET localhost:8080/trainer
+Authorization: Basic 88 88
+
+### Get list trainer user "Insufficient privileges"
+GET localhost:8080/trainer
+Authorization: Basic trainer1 trainer_pass123
+
+### Get list trainer apprentice user
+GET localhost:8080/trainer
+Authorization: Basic apprentice1 secure123
+
+### Get id trainer admin
+GET localhost:8080/trainer/22
+Authorization: Bearer_{{trainer}}
+
+### Get id trainer user trainer
+GET localhost:8080/trainer/22
+Authorization: Basic 555 555
+
+### Get id trainer user trainer "Trainer does not match user id authentication"
+GET localhost:8080/trainer/12
+Authorization: Basic trainer1 trainer_pass123
+
+### Get id trainer apprentice user
+GET localhost:8080/trainer/3
+Authorization: Basic 111 111
+
+### Get list trainer does not exists
+GET localhost:8080/trainer/100
+
+### Put apprentice admin
+PUT localhost:8080/trainer
+content-type:application/json
+Authorization: Basic admin3 222
+
+{
+  "id": 11,
+  "type": "trainer",
+  "login": "junior_trainer",
+  "surname": "Вермов",
+  "name": "Волга",
+  "patronymic": "Волговиевич",
+  "password": "VOlga2023!",
+  "experience": 2,
+  "email": "vvo.petrova@school.ru"
+}
+
+### Put trainer user trainer
+PUT localhost:8080/trainer
+content-type:application/json
+Authorization: Basic trainer1 trainer_pass123
+
+{
+  "id": 11,
+  "type": "trainer",
+  "login": "junior_trainer",
+  "surname": "Вермов",
+  "name": "Волга",
+  "patronymic": "Волговиевич",
+  "password": "VOlga2023!",
+  "experience": 2,
+  "email": "vvo.petrova@school.ru"
+}
+
+### Put trainer user trainer "Trainer does not match user id authentication"
+PUT localhost:8080/trainer
+content-type:application/json
+Authorization: Basic 555 555
+
+{
+  "id": 11,
+  "type": "trainer",
+  "login": "junior_trainer",
+  "surname": "Вермов",
+  "name": "Волга",
+  "patronymic": "Волговиевич",
+  "password": "VOlga2023!",
+  "experience": 2,
+  "email": "vvo.petrova@school.ru"
+}
+
+### Put trainer user apprentice1 "Insufficient privileges"
+PUT localhost:8080/trainer
+content-type:application/json
+Authorization: Basic 11 11
+
+{
+  "id": 3,
+  "type": "trainer",
+  "login": "junior_trainer",
+  "surname": "Вермов",
+  "name": "Волга",
+  "patronymic": "Волговиевич",
+  "password": "VOlga2023!",
+  "experience": 2,
+  "email": "vvo.petrova@school.ru"
+}
+
+### Delete trainer admin
+DELETE localhost:8080/trainer/8
+Authorization: Basic kirill 123
+
+### Delete trainer user trainer
+DELETE localhost:8080/trainer/11
+content-type:application/json
+Authorization: Basic trainer1 trainer_pass123
+
+### Delete trainer user trainer "Trainer does not match user id authentication"
+DELETE localhost:8080/trainer/11
+Authorization: Basic 555 555
+
+### Delete trainer user apprentice "Insufficient privileges"
+DELETE localhost:8080/trainer/35
+Authorization: Basic 44 44
+
+### Delete trainer does not exists
+DELETE localhost:8080/trainer/100
+
+
+###
+#--------------------------------------Trainer_schedules-----------------------------------
+
+### add Trainer_schedules user admin
+POST localhost:8080/trainerSchedule/16?dayOfTheWeek=monday&localTimeStart=09:00&localTimeEnd=23:00
+Authorization: Basic kirill 123
+
+### add Trainer_schedules user trainer
+POST localhost:8080/trainerSchedule/16?dayOfTheWeek=tuesday&localTimeStart=09:00&localTimeEnd=23:00
+Authorization: Basic kirill 123
+
+### add Trainer_schedules user apprentice "Insufficient privileges"
+POST localhost:8080/trainerSchedule/16?dayOfTheWeek=wednesday&localTimeStart=09:00&localTimeEnd=23:00
+Authorization: Basic kirill 123
+
+### add Trainer_schedules Apprentice does not match user id authentication
+POST localhost:8080/trainerSchedule/16?dayOfTheWeek=Thursday&localTimeStart=09:00&localTimeEnd=23:00
+Authorization: Basic kirill 123
+
+### add Trainer_schedules
+POST localhost:8080/trainerSchedule/16?dayOfTheWeek=Friday&localTimeStart=09:00&localTimeEnd=23:00
+Authorization: Basic kirill 123
+
+### add Trainer_schedules
+POST localhost:8080/trainerSchedule/12?dayOfTheWeek=Saturday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8080/trainerSchedule/13?dayOfTheWeek=Saturday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8080/trainerSchedule/27?dayOfTheWeek=Saturday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8080/trainerSchedule/1?dayOfTheWeek=Saturday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8080/trainerSchedule/27?dayOfTheWeek=Saturday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8080/trainerSchedule/11?dayOfTheWeek=wednesday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8080/trainerSchedule/12?dayOfTheWeek=wednesday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8080/trainerSchedule/13?dayOfTheWeek=wednesday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8080/trainerSchedule/11?dayOfTheWeek=wednesday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules not exists
+POST localhost:8080/trainerSchedule/100?dayOfTheWeek=Saturday&localTimeStart=17:00&localTimeEnd=19:00
+
+
+### get Trainer_schedules by id admin user
+GET localhost:8080/trainerSchedule/12
+Authorization: Basic admin3 222
+
+### get Trainer_schedules by id trainer user
+GET localhost:8080/trainerSchedule/11
+Authorization: Basic trainer1 trainer_pass123
+
+### get Trainer_schedules by id trainer user "Trainer does not match user id authentication"
+GET localhost:8080/trainerSchedule/11
+Authorization: Basic 555 555
+
+### get Trainer_schedules by id apprentice user
+GET localhost:8080/trainerSchedule/12
+Authorization: Basic apprentice1 secure123
+
+### get Trainer_schedules by id does not exists
+GET localhost:8080/trainerSchedule/100
+
+### get Trainer_schedules by id does not training
+GET localhost:8080/trainerSchedule/5
+
+
+
+### remove Trainer_schedules by id user apprentice "Insufficient privileges"
+DELETE localhost:8080/trainerSchedule/16?dayOfTheWeek=monday
+Authorization: Basic kirill 123
+
+### remove Trainer_schedules by id user admin
+DELETE localhost:8080/trainerSchedule/1?dayOfTheWeek=monday
+Authorization: Basic admin3 222
+
+### remove Trainer_schedules by id user admin
+DELETE localhost:8080/trainerSchedule/11?dayOfTheWeek=monday
+Authorization: Basic trainer1 trainer_pass123
+
+### remove Trainer_schedules by id user trainer "Trainer does not match user id authentication"
+DELETE localhost:8080/trainerSchedule/27?dayOfTheWeek=monday
+Authorization: Basic trainer1 trainer_pass123
+
+### remove Trainer_schedules by trainer id  not exists
+DELETE localhost:8080/trainerSchedule/100?dayOfTheWeek=monday
+Authorization: Basic admin3 222
+
+
+###
+#--------------------------------------Training-----------------------------------
+
+### add Training user admin
+POST localhost:8080/training/11/8
+content-type:application/json
+Authorization: Basic admin3 222
+
+{
+  "numberGym": 1,
+  "date": "25.06.2025",
+  "timeStart": "09:00"
+}
+
+### add Training user trainer
+POST localhost:8080/training/3/15
+content-type:application/json
+Authorization: Basic trainer1 trainer_pass123
+
+{
+  "numberGym": 1,
+  "date": "25.06.2025",
+  "timeStart": "09:00"
+}
+
+
+### add Training user trainer "Trainer does not match user id authentication"
+POST localhost:8080/training/13/2
+content-type:application/json
+Authorization: Basic trainer1 trainer_pass123
+
+{
+  "numberGym": 2,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add Training user apprentice
+POST localhost:8080/training/11/17
+content-type:application/json
+Authorization: Basic apprentice1 secure123
+
+{
+  "numberGym": 3,
+  "date": "14.01.2025",
+  "timeStart": "09:00"
+}
+
+### add Training user apprentice "Apprentice does not match user id authentication"
+POST localhost:8080/training/11/17
+content-type:application/json
+Authorization: Basic apprentice2 anna2023
+
+{
+  "numberGym": 4,
+  "date": "27.07.2025",
+  "timeStart": "09:00"
+}
+
+### add Training "Apprentice does not match user id authentication"
+POST localhost:8080/training/11/8
+content-type:application/json
+Authorization: Basic teen_fencer maria2008
+
+{
+  "numberGym": 5,
+  "date": "17.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "Trainer does not exists!"
+POST localhost:8080/training/2/40
+content-type:application/json
+
+{
+  "numberGym": 6,
+  "date": "22.01.2022",
+  "timeStart": "20:00"
+}
+
+### add erorr Training "Тренер не работает в выбранный день"
+POST localhost:8080/training/1/3
+content-type:application/json
+
+{
+  "numberGym": 2,
+  "date": "24.04.2025",
+  "timeStart": "23:10"
+}
+
+### add erorr Training "Тренер уже имеет 3 или более тренировок в это время"
+POST localhost:8080/training/1/2
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "06.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "Тренер уже имеет 3 или более тренировок в это время"
+POST localhost:8080/training/1/3
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "06.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "Тренер уже имеет 3 или более тренировок в это время"
+POST localhost:8080/training/1/4
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "06.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/1/1
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/1/2
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/1/3
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/2/5
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/2/6
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/3/7
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/3/8
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/3/9
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/4/10
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/4/11
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8080/training/3/14
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+
+### add erorr Training "Ученик в один день не может присутствовать сразу на нескольких тренировках"
+POST localhost:8080/training/3/14
+content-type:application/json
+Authorization: Basic 12 12
+
+{
+  "numberGym": 2,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### get Training by training
+GET localhost:8080/training/1
+Authorization: Basic admin3 222
+
+### get Training by training "Incorrect login or password"
+GET localhost:8080/training/1
+Authorization: Basic admin13 2221
+
+### get Training by training "message": "Authentication error"
+GET localhost:8080/training/1
+
+### get Training by training user trainer
+GET localhost:8080/training/1
+Authorization: Basic trainer1 trainer_pass123
+
+### get Training by training not exists
+GET localhost:8080/training/100
+Authorization: Basic admin3 222
+
+### get Training by trainerId
+GET localhost:8080/training/trainer/11
+
+### get Training by trainerId not exists
+GET localhost:8080/training/trainer/100
+
+### get Training by apprenticeId
+GET localhost:8080/training/apprentice/9
+Authorization: Basic teen_fencer maria2008
+
+### get Training by apprenticeId "Apprentice does not match user id authentication"
+GET localhost:8080/training/apprentice/8
+Authorization: Basic teen_fencer maria2008
+
+### get Training by apprenticeId not exists
+GET localhost:8080/training/apprentice/100
+
+
+
+### get Training by trainer dayOfTheWeek
+GET localhost:8080/training/1?dayOfTheWeek=monday
+
+### get Training by numberGym and data
+GET localhost:8080/training/7?date=22-01-2022
+
+### get Training by apprenticeId and data
+GET localhost:8080/training/1?date=08-01-2025
+
+
+### remove Apprentice by id
+DELETE localhost:8080/training/12
+Authorization: Basic admin3 222
+
+### remove Apprentice by id
+DELETE localhost:8080/training/6
+Authorization: Basic 78 78
+
+### remove Apprentice by id
+DELETE localhost:8080/training/3
+Authorization: Basic master_coach MasterF3nc!ng
+
+### remove Apprentice by id
+DELETE localhost:8080/training/4
+Authorization: Basic apprentice1 secure123
+
+### remove Apprentice by id "Training does not exists!"
+DELETE localhost:8080/training/2
+Authorization: Basic teen_fencer maria2008
+
+### remove Apprentice by id  not exists
+DELETE localhost:8080/training/100
+
+

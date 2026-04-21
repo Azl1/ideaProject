@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact name="BuildLect:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BuildLect_jar</output-path>
+    <root id="root">
+      <element id="archive" name="BuildLect.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="BuildLect" />
+      </element>
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.14.2" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.14.2" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.2" />
+    </root>
+  </artifact>
+</component>

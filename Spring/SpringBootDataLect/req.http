@@ -1,0 +1,182 @@
+### POST user
+POST localhost:8082/user
+content-type: application/json
+
+{
+  "login" : "petr123",
+  "firstName" : "Petr",
+  "lastName" : "Petrov"
+}
+
+### POST user
+POST localhost:8082/user
+content-type: application/json
+
+{
+  "login" : "ivan1",
+  "firstName" : "Ivan",
+  "lastName" : "Ivanov"
+}
+
+### POST user
+POST localhost:8082/user
+content-type: application/json
+
+{
+  "login" : "sidr",
+  "firstName" : "Sidr",
+  "lastName" : "Sidorov"
+}
+
+### POST user incorrect
+POST localhost:8082/user
+content-type: application/json
+
+{
+  "login" : "petr123",
+  "firstName" : "Petr",
+  "lastName" : "Petrov"
+}
+
+### GET all users
+GET localhost:8082/user
+
+### GET user by id
+GET localhost:8082/user/1
+
+### GET user by id incorrect
+GET localhost:8082/user/100
+
+### DELETE user by id
+DELETE localhost:8082/user/1
+
+### DELETE user by id
+DELETE localhost:8082/user/100
+
+### PUT user
+PUT localhost:8082/user
+content-type: application/json
+
+{
+  "id" : 2,
+  "login" : "demidov",
+  "firstName" : "Denis",
+  "lastName" : "Demidov"
+}
+
+### PUT user incorrect id
+PUT localhost:8082/user
+content-type: application/json
+
+{
+  "id" : 1,
+  "login" : "petr123",
+  "firstName" : "Petr",
+  "lastName" : "Petrov"
+}
+
+### PUT user incorrect constraint
+PUT localhost:8082/user
+content-type: application/json
+
+{
+  "id" : 3,
+  "login" : "demidov",
+  "firstName" : "Denis",
+  "lastName" : "Demidov"
+}
+
+### POST tv
+POST localhost:8082/tv/1
+content-type: application/json
+
+{
+  "brand" : "Samsung",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### POST tv
+POST localhost:8082/tv/1
+content-type: application/json
+
+{
+  "brand" : "Panasonic",
+  "model" : "E45",
+  "color" : "White",
+  "timeExpectancy" : 10,
+  "price" : 10000,
+  "produceDate" : "14.12.2000"
+}
+
+### POST tv incorrect constraint
+POST localhost:8082/tv/1
+content-type: application/json
+
+{
+  "brand" : "Samsung",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### POST tv incorrect userId
+POST localhost:8082/tv/100
+content-type: application/json
+
+{
+  "brand" : "Samsung",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### GET all tv
+GET localhost:8082/tv
+
+### GET tv by id
+GET localhost:8082/tv/1
+
+### GET tv by id incorrect
+GET localhost:8082/tv/100
+
+### PUT tv
+PUT localhost:8082/tv
+content-type: application/json
+
+{
+  "id" : 1,
+  "brand" : "Gnusmas",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### PUT tv incorrect constraint
+PUT localhost:8082/tv
+content-type: application/json
+
+{
+  "id" : 1,
+  "brand" : "Panasonic",
+  "model" : "E45",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### DELETE tv by id
+DELETE localhost:8082/tv/1
+
+### DELETE tv by id incorrect
+DELETE localhost:8082/tv/100

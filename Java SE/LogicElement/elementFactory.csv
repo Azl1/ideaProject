@@ -1,0 +1,10 @@
+AND;false;true;false;false;true
+AND;false;true;false;false;false
+AND;true;true;true;false;true;true;true
+OR;true;true;false;true;false
+OR;true;false;false;false;true
+OR;true;true;true;false
+OR;false;true;false;false;true
+XOR;true;false;false;false
+XOR;true;true;true;false;false;false
+XOR;false;true;false;false;true

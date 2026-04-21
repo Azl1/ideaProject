@@ -1,0 +1,137 @@
+### Добавление юзера
+POST http://localhost:8080/user
+content-type: application/json
+
+{
+  "userName": "Kirill",
+  "password": "123"
+}
+
+### Добавление юзера
+POST http://localhost:8080/user
+content-type: application/json
+
+{
+  "userName": "Ivan",
+  "password": "123"
+}
+
+### Добавление юзера
+POST http://localhost:8080/user
+content-type: application/json
+
+{
+  "userName": "Dimentor",
+  "password": "456"
+}
+
+### Добавление роли юзера некорректно при отсутствии авторизации
+POST http://localhost:8080/role
+content-type: application/json
+
+{
+  "name": "ROLE_USER"
+}
+
+### Добавление роли юзера
+POST http://localhost:8080/role
+content-type: application/json
+Authorization: Basic Kirill 123
+
+{
+  "name": "ROLE_ADMIN"
+}
+
+### Добавление роли юзера
+POST http://localhost:8080/role
+content-type: application/json
+Authorization: Basic Kirill 123
+
+{
+  "name": "ROLE_USER"
+}
+
+### Добавление роли юзера к юзеру некорректно при отсутствии авторизации
+POST http://localhost:8080/role
+content-type: application/json
+
+
+### Добавление роли юзера к юзеру некорректно при неверной роли (403)
+POST http://localhost:8080/role
+content-type: application/json
+Authorization: Basic Dimentor 456
+
+### Добавление роли юзера к юзеру
+POST http://localhost:8080/user/2/2
+Content-Type: application/json
+Authorization: Basic Kirill 123
+
+### Добавление роли юзера к юзеру с ошибкой дубликации роли
+POST http://localhost:8080/user/2/2
+Content-Type: application/json
+Authorization: Basic Kirill 123
+
+### Добавление роли модератора без администратора
+POST http://localhost:8080/role
+content-type: application/json
+
+{
+  "name": "ROLE_MODERATOR"
+}
+
+### Добавление роли модератора с администратором и не правильным паролем
+POST http://localhost:8080/role
+content-type: application/json
+Authorization: Basic Kirillich 11123
+
+{
+  "name": "ROLE_MODERATOR"
+}
+
+### Добавление роли модератора с администратором
+POST http://localhost:8080/role
+content-type: application/json
+Authorization: Basic Kirill 123
+
+{
+  "name": "ROLE_MODERATOR"
+}
+
+
+### Получить user с аутентификацией (без авторизации не работает)
+GET http://localhost:8080/user
+
+### Получить user с аутентификацией (некорректный пароль)
+GET http://localhost:8080/user
+Authorization: Basic Kirill 444
+
+### Получить user с аутентификацией (некорректный логин)
+GET http://localhost:8080/user
+Authorization: Basic Kirillich 123
+
+### Получить user с аутентификацией
+GET http://localhost:8080/user
+Authorization: Basic Kirill 123
+
+### Не Работает без авторизации
+GET http://localhost:8080/user/welcome
+
+### Не Работает без авторизации
+GET http://localhost:8080/admin/welcome
+
+### Работает с авторизацией
+GET http://localhost:8080/admin/welcome
+Authorization: Basic Kirill 123
+
+### Работает без авторизации, так как сеанс уже сохранен
+GET http://localhost:8080/admin
+
+### Работает с авторизацией (для админа)
+GET http://localhost:8080/user/welcome
+Authorization: Basic Kirill 123
+
+### Не работает для пользователя с некорректной ролью
+GET http://localhost:8080/admin/welcome
+Authorization: Basic Dimentor 456
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.fencingschoolfx.controllers.MainController">
+   <children>
+      <Label fx:id="mainLabel" layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="202.0" />
+      <ListView fx:id="listApprentice" layoutX="14.0" layoutY="139.0" prefHeight="200.0" prefWidth="468.0" />
+      <ListView fx:id="listTrainer" layoutX="498.0" layoutY="139.0" prefHeight="200.0" prefWidth="468.0" />
+      <Button layoutX="401.0" layoutY="349.0" mnemonicParsing="false" onAction="#buttonAddUser" prefHeight="32.0" prefWidth="136.0" text="Добавить" />
+      <Button layoutX="14.0" layoutY="67.0" mnemonicParsing="false" onAction="#buttonRemoveUser" prefHeight="26.0" prefWidth="144.0" text="Удалить пользователя" />
+      <Button layoutX="216.0" layoutY="67.0" mnemonicParsing="false" onAction="#buttonExit" prefHeight="26.0" prefWidth="144.0" text="Выйти" />
+      <Label layoutX="14.0" layoutY="107.0" prefHeight="32.0" prefWidth="202.0" text="Список учеников" />
+      <Label layoutX="493.0" layoutY="107.0" prefHeight="32.0" prefWidth="202.0" text="Список тренеров" />
+      <Button layoutX="582.0" layoutY="349.0" mnemonicParsing="false" onAction="#updateListButton" prefHeight="32.0" prefWidth="136.0" text="Обновить списки" />
+   </children>
+</AnchorPane>

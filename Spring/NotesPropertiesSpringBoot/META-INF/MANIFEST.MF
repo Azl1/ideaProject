@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Main-Class: com.abdullaevaziz.Main
+Class-Path: spring-boot-starter-web-2.5.4.jar spring-boot-starter-tomcat
+ -2.5.4.jar jakarta.annotation-api-1.3.5.jar logback-core-1.2.5.jar jack
+ son-annotations-2.12.4.jar jackson-datatype-jsr310-2.12.4.jar spring-as
+ pects-5.3.9.jar logback-classic-1.2.5.jar jakarta.persistence-api-2.2.3
+ .jar mysql-connector-java-8.0.26.jar dom4j-2.1.3.jar log4j-to-slf4j-2.1
+ 4.1.jar jackson-core-2.12.4.jar jackson-module-parameter-names-2.12.4.j
+ ar spring-jdbc-5.3.9.jar spring-boot-2.5.4.jar jboss-logging-3.4.2.Fina
+ l.jar spring-aop-5.3.9.jar slf4j-api-1.7.32.jar spring-boot-autoconfigu
+ re-2.5.4.jar spring-data-jpa-2.5.4.jar spring-boot-starter-aop-2.5.4.ja
+ r spring-boot-starter-security-2.5.4.jar spring-webmvc-5.3.9.jar spring
+ -data-commons-2.5.4.jar log4j-api-2.14.1.jar tomcat-embed-core-9.0.52.j
+ ar spring-jcl-5.3.9.jar spring-beans-5.3.9.jar jakarta.transaction-api-
+ 1.3.3.jar spring-boot-starter-data-jpa-2.5.4.jar jul-to-slf4j-1.7.32.ja
+ r spring-web-5.3.9.jar jaxb-runtime-2.3.5.jar istack-commons-runtime-3.
+ 0.12.jar spring-tx-5.3.9.jar classmate-1.5.1.jar hibernate-commons-anno
+ tations-5.1.2.Final.jar spring-orm-5.3.9.jar spring-boot-starter-2.5.4.
+ jar spring-core-5.3.9.jar aspectjweaver-1.9.7.jar spring-boot-starter-j
+ dbc-2.5.4.jar snakeyaml-1.28.jar tomcat-embed-websocket-9.0.52.jar jack
+ son-datatype-jdk8-2.12.4.jar javassist-3.27.0-GA.jar antlr-2.7.7.jar by
+ te-buddy-1.10.22.jar jakarta.activation-1.2.2.jar spring-security-confi
+ g-5.5.2.jar jandex-2.2.3.Final.jar HikariCP-4.0.3.jar spring-boot-start
+ er-logging-2.5.4.jar hibernate-core-5.4.32.Final.jar spring-security-cr
+ ypto-5.5.2.jar spring-context-5.3.9.jar spring-security-web-5.5.2.jar j
+ ackson-databind-2.12.4.jar tomcat-embed-el-9.0.52.jar spring-boot-start
+ er-json-2.5.4.jar spring-expression-5.3.9.jar jakarta.xml.bind-api-2.3.
+ 3.jar txw2-2.3.5.jar spring-security-core-5.5.2.jar
+

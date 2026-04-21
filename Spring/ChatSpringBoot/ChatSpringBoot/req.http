@@ -1,0 +1,73 @@
+### Add user
+POST http://localhost:8081/user/register
+content-type:application/json
+
+{
+  "login": "111",
+  "name": "111",
+  "password": "111"
+}
+
+### get token admin
+GET http://localhost:8081/user/token?username=111&password=111
+
+### Add admin authentification без аутентификации ошибка
+POST http://localhost:8081/user/admin
+content-type:application/json
+
+{
+  "login": "111",
+  "name": "111",
+  "password": "111"
+}
+
+### Add admin
+POST http://localhost:8081/user/register
+content-type:application/json
+
+
+{
+  "login": "222",
+  "name": "222",
+  "password": "222"
+}
+
+### get token user
+GET http://localhost:8081/user/token?username=222&password=222
+
+
+### Add admin
+GET http://localhost:8081/user/1
+content-type:application/json
+
+
+### ------------------------------------------------------------------------------------------
+### Get admin
+GET http://localhost:8081/chat/sse/chat/1
+
+### post message user
+POST http://localhost:8081/message/1
+Content-Type: application/json
+
+{
+"text": "Привет всем!"
+}
+
+### post message user
+POST http://localhost:8081/message/1
+Content-Type: application/json
+
+{
+  "text": "Нужно стараться!"
+}
+
+
+### Get listMessage
+GET http://localhost:8081/listMessage
+
+### Get list online users
+GET http://localhost:8081/online
+
+
+### получение login и паролья
+GET http://localhost:8081/user/login?login=111&password=111

@@ -1,0 +1,110 @@
+### Add user
+POST http://localhost:8081/user/admin
+content-type:application/json
+
+{
+  "login": "111",
+  "name": "111",
+  "password": "111"
+}
+
+### get token admin
+GET http://localhost:8081/user/token?username=111&password=111
+
+### Add admin authentification без аутентификации ошибка
+POST http://localhost:8081/user/admin
+content-type:application/json
+
+{
+  "login": "111",
+  "name": "111",
+  "password": "111"
+}
+
+### Add admin
+POST http://localhost:8081/user
+content-type:application/json
+
+{
+  "login": "222",
+  "name": "222",
+  "password": "222"
+}
+
+### get token user
+GET http://localhost:8081/user/token?username=222&password=222
+
+
+### Add admin
+GET http://localhost:8081/user/1
+content-type:application/json
+Authorization: Bearer {{admin}}
+
+
+
+### Get quiz 1
+GET http://localhost:8081/quiz/questions?amount=10&category=21&difficulty=easy
+Authorization: Bearer {{user}}
+
+### Get quiz 2
+GET http://localhost:8081/quiz/questions?amount=5&category=10&difficulty=easy
+Authorization: Bearer {{admin}}
+
+
+
+### Get params 1
+GET https://opentdb.com/api.php?amount=10&category=28&difficulty=medium
+Authorization: Bearer {{user}}
+
+### Get params 2
+GET https://opentdb.com/api.php?amount=7&category=27
+Authorization: Bearer {{user}}
+
+### Get params
+GET http://localhost:8081/quiz/answer/2?answer=Cue
+Authorization: Bearer {{user}}
+
+### Get params
+GET http://localhost:8081/quiz/answer/1?answer=Russia
+Authorization: Bearer {{user}}
+
+### Get id user and list quiz
+GET http://localhost:8081/quiz/2
+Authorization: Bearer {{admin}}
+
+### Get history list
+GET http://localhost:8081/quiz/historyList/2
+Authorization: Bearer {{admin}}
+
+### Get history list
+GET http://localhost:8081/quiz/history/answer/1
+Authorization: Bearer {{admin}}
+
+### Get list users
+GET http://localhost:8081/user/listUsers
+Authorization: Bearer {{admin}}
+
+### Erorr get list users
+GET http://localhost:8081/user/listUsers
+Authorization: Bearer {{user}}
+
+### Get list users
+GET http://localhost:8081/user/1
+Authorization: Bearer {{admin}}
+
+### Post history
+POST http://localhost:8081/quiz/history
+Authorization: Bearer {{admin}}
+content-type:application/json
+
+{
+  "resultId": 23,
+  "answer": "22552"
+}
+
+### Get user by token
+GET localhost:8081/user
+content-type:application/json
+Authorization: Bearer {{admin}}
+
+

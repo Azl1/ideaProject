@@ -1,0 +1,130 @@
+
+### Post new circle
+POST localhost:8081/figure
+content-type: application/json
+
+{
+  "type": "circle",
+  "a": 5.0
+}
+
+### Post new rectangle
+POST localhost:8081/figure
+content-type: application/json
+
+{
+  "type": "rectangle",
+  "a": 4.0,
+  "b": 6.0
+}
+
+
+### Post new square
+POST localhost:8081/figure
+content-type: application/json
+
+{
+  "type": "square",
+  "a": 5.0
+}
+
+### Post new triangle
+POST localhost:8081/figure
+content-type: application/json
+
+{
+  "type": "triangle",
+  "a": 3.0,
+  "b": 4.0,
+  "c": 5.0
+}
+
+
+
+### Delete circle
+DELETE localhost:8081/figure/1
+
+### Delete circle
+DELETE localhost:8081/figure/1
+
+### Delete circle
+DELETE localhost:8081/figure/1
+
+### Delete circle
+DELETE localhost:8081/figure/1
+
+
+
+### Put circle
+PUT localhost:8081/figure
+content-type: application/json
+
+{
+  "type": "circle",
+  "id": 8,
+  "a": 7.0
+}
+
+### Put rectangle
+PUT localhost:8081/figure
+content-type: application/json
+
+{
+  "type": "rectangle",
+  "id": 2,
+  "a": 4.0,
+  "b": 6.0
+}
+
+### Put square
+PUT localhost:8081/figure
+content-type: application/json
+
+{
+  "type": "square",
+  "id": 3,
+  "a": 5.0
+}
+
+### Put triangle
+PUT localhost:8081/figure
+content-type: application/json
+
+{
+  "type": "triangle",
+  "id": 4,
+  "a": 4.0,
+  "b": 4.0,
+  "c": 5.0
+}
+
+### Get circle
+GET localhost:8081/figure/1
+
+### Get rectangle
+GET localhost:8081/figure/2
+
+### Get square
+GET localhost:8081/figure/3
+
+### Get triangle
+GET localhost:8081/figure/4
+
+
+
+
+
+### Get figure
+GET localhost:8081/figure
+
+### Get circle
+GET localhost:8081/circle
+
+### Get rectangle
+GET localhost:8081/rectangle
+
+### Get square
+GET localhost:8081/square
+
+### Get triangle
+GET localhost:8081/triangle

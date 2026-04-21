@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.chatspringbootfx.controllers.MainController">
+    <children>
+        <Label fx:id="textLabel" layoutX="67.0" layoutY="55.0" prefHeight="37.0" prefWidth="131.0" />
+        <ListView fx:id="messageListView" layoutX="30.0" layoutY="74.0" prefHeight="102.0" prefWidth="550.0" />
+        <Button layoutX="340.0" layoutY="319.0" mnemonicParsing="false" onAction="#exit" prefHeight="72.0" prefWidth="243.0" text="Exit" />
+        <Label fx:id="label" layoutX="30.0" layoutY="52.0" prefHeight="19.0" prefWidth="131.0" />
+      <Button layoutX="38.0" layoutY="318.0" mnemonicParsing="false" onAction="#buttonSendMessage" prefHeight="72.0" prefWidth="243.0" text="Отправить сообщение" />
+      <TextField fx:id="textField" layoutX="31.0" layoutY="202.0" prefHeight="102.0" prefWidth="550.0" />
+      <ListView fx:id="listViewOnline" layoutX="599.0" layoutY="97.0" prefHeight="295.0" prefWidth="182.0" />
+      <Label layoutX="599.0" layoutY="73.0" prefHeight="19.0" prefWidth="182.0" text="Список онлайн пользователей" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+{
+  "brand": "Samsung",
+  "model": "K900",
+  "color": "Black",
+  "timeExpectancy": 10,
+  "price": 10000.0,
+  "date": "14.11.1990 07:11:12",
+  "localDateTime": "14.11.1990 10:11:12",
+  "size": {
+    "length": 1.0,
+    "width": 2.0,
+    "height": 3.0
+  }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.calculatorfx.controllers.MainController">
+   <children>
+      <TextField fx:id="dataInput1" layoutX="53.0" layoutY="73.0" prefHeight="36.0" prefWidth="219.0" />
+      <TextField fx:id="dataInput2" layoutX="53.0" layoutY="175.0" prefHeight="36.0" prefWidth="219.0" />
+      <TextField fx:id="result" layoutX="53.0" layoutY="285.0" prefHeight="51.0" prefWidth="149.0" />
+      <Label fx:id="dataInputTxt1" layoutX="53.0" layoutY="39.0" prefHeight="17.0" prefWidth="142.0" text="Ввод данных1" />
+      <Label fx:id="dataInputTxt2" layoutX="53.0" layoutY="134.0" prefHeight="17.0" prefWidth="149.0" text="Ввод данных2" />
+      <Label layoutX="53.0" layoutY="238.0" prefHeight="36.0" prefWidth="149.0" text="Вывод данных" />
+      <Button id="plusButton" fx:id="plus" layoutX="300.0" layoutY="73.0" mnemonicParsing="false" onAction="#plus" prefHeight="84.0" prefWidth="85.0" text="+">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Button>
+      <Button id="minusButton" fx:id="minus" layoutX="416.0" layoutY="73.0" mnemonicParsing="false" onAction="#minus" prefHeight="84.0" prefWidth="85.0" text="-">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Button>
+      <Button id="multiplicationButton" fx:id="multiply" layoutX="300.0" layoutY="175.0" mnemonicParsing="false" onAction="#multiply" prefHeight="84.0" prefWidth="85.0" text="*">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Button>
+      <Button id="divisionButton" fx:id="divisions" layoutX="416.0" layoutY="175.0" mnemonicParsing="false" onAction="#divisions" prefHeight="84.0" prefWidth="85.0" text="/">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Button>
+      <Label fx:id="arithmeticOperationSign" layoutX="181.0" layoutY="117.0" prefHeight="51.0" prefWidth="85.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="219.0" prefHeight="51.0" prefWidth="85.0" text="=">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

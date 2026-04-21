@@ -1,0 +1,815 @@
+###
+# --------------------Users-------------------------------
+
+POST localhost:8084/user
+content-type:application/json
+
+{
+  "login" : 1,
+  "password" : 1,
+  "name" : 1
+}
+
+### add User
+POST localhost:8084/user
+content-type:application/json
+
+{
+  "login" : "a@bk.ru",
+  "password" : 111,
+  "name" : "Иван"
+}
+
+### add User
+POST localhost:8084/user
+content-type:application/json
+
+{
+  "login" : "b@bk.ru",
+  "password" : 222,
+  "name" : "Петр"
+}
+
+### add User
+POST localhost:8084/user
+content-type:application/json
+
+{
+  "login" : "с@bk.ru",
+  "password" : 333,
+  "name" : "Леха"
+}
+
+### add User
+POST localhost:8084/user
+content-type:application/json
+
+{
+  "login" : "x@bk.ru",
+  "password" : 123,
+  "name" : "Перец"
+}
+
+### get User by id
+GET localhost:8084/user/2
+
+### get User by incorrect id
+GET localhost:8084/user/100
+
+### get User by login and password
+GET localhost:8084/user/auth?login=a@bk.ru&password=111
+
+### get User by login and password
+GET localhost:8084/user/auth?login=b@bk.ru&password=222
+
+### get User by login and password erorr
+GET localhost:8084/user/auth?login=123@bk.ru&password=4123
+
+### remove User by id
+DELETE localhost:8084/user/3
+
+
+
+
+
+
+###
+# --------------------Trainer-------------------------------
+
+### add Trainer
+POST localhost:8084/trainer
+content-type:application/json
+
+{
+  "surname" : 1,
+  "name": "Евгений",
+  "patronymic": "Евгеньевич",
+  "experience": 1
+}
+
+### add Trainer
+POST localhost:8084/trainer
+content-type:application/json
+
+{
+  "surname" : 2,
+  "name": "Леонид",
+  "patronymic": "Леонидович",
+  "experience": 2
+}
+
+### add Trainer
+POST localhost:8084/trainer
+content-type:application/json
+
+{
+  "surname" : 3,
+  "name": "Ярослав",
+  "patronymic": "Ярославович",
+  "experience": 3
+}
+
+### add Trainer
+POST localhost:8084/trainer
+content-type:application/json
+
+{
+  "surname" : 4,
+  "name": "Олег",
+  "patronymic": "Олегович",
+  "experience": 10
+}
+
+### add Trainer
+POST localhost:8084/trainer
+content-type:application/json
+
+{
+  "surname" : 5,
+  "name": "Ва",
+  "patronymic": "Пе",
+  "experience": 1
+}
+
+### add Trainer
+POST localhost:8084/trainer
+content-type:application/json
+
+{
+  "surname" : 6,
+  "name": "Вак",
+  "patronymic": "Пек",
+  "experience": 1
+}
+
+### add Trainer
+POST localhost:8084/trainer
+content-type:application/json
+
+{
+  "surname" : 7,
+  "name": "Ваку",
+  "patronymic": "Пеку",
+  "experience": 1
+}
+
+### add Trainer
+POST localhost:8084/trainer
+content-type:application/json
+
+{
+  "surname" : 8,
+  "name": "Вася",
+  "patronymic": "Петрушин",
+  "experience": 11
+}
+
+### add Trainer
+POST localhost:8084/trainer
+content-type:application/json
+
+{
+  "surname" : 9,
+  "name": "Вася",
+  "patronymic": "Петрушин",
+  "experience": 11
+}
+
+### add Trainer
+POST localhost:8084/trainer
+content-type:application/json
+
+{
+  "surname" : 10,
+  "name": "Вася",
+  "patronymic": "Петрушин",
+  "experience": 11
+}
+
+### get all Trainer
+GET localhost:8084/trainer
+
+### get Trainer by id
+GET localhost:8084/trainer/1
+
+### get Trainer by incorrect id
+GET localhost:8084/trainer/100
+
+
+### remove Trainer by id
+DELETE localhost:8084/trainer/3
+
+### update Trainer
+PUT localhost:8084/trainer
+content-type:application/json
+
+{
+  "id": 1,
+  "surname" : 4,
+  "name": "Валерий",
+  "patronymic": "Валерьевич",
+  "experience": 2
+}
+
+### update Trainer
+PUT localhost:8084/trainer
+content-type:application/json
+
+{
+  "id": 2,
+  "surname" : 5,
+  "name": "Борис",
+  "patronymic": "Борисович",
+  "experience": 7
+}
+
+### update Trainer
+PUT localhost:8084/trainer
+content-type:application/json
+
+{
+  "id": 3,
+  "surname" : 8,
+  "name": "Валентин",
+  "patronymic": "Валентинович",
+  "experience": 5
+}
+
+### update Trainer erorr
+PUT localhost:8084/trainer
+content-type:application/json
+
+{
+  "id": 4,
+  "surname" : 10,
+  "name": "Дмитрий",
+  "patronymic": "Дмитриевич",
+  "experience": 4
+}
+
+
+
+
+
+###
+# --------------------Apprentice-------------------------------
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Крылов",
+  "name": "Учение № 1",
+  "patronymic": "Германович",
+  "phoneNumber": "1234567"
+}
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Журавлев",
+  "name": "Учение № 2",
+  "patronymic": "Давидович",
+  "phoneNumber": "87654321"
+}
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Пончиков",
+  "name": "Учение № 3",
+  "patronymic": "Никитович",
+  "phoneNumber": "147852368"
+}
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Вердюк",
+  "name": "Учение № 4",
+  "patronymic": "Казбекович",
+  "phoneNumber": "8855442211"
+}
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Козлов",
+  "name": "Учение № 5",
+  "patronymic": "Платонович",
+  "phoneNumber": "152345467"
+}
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Козлов",
+  "name": "Учение № 6",
+  "patronymic": "Платонович",
+  "phoneNumber": "152345445267"
+}
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Козлов",
+  "name": "Учение № 7",
+  "patronymic": "Платонович",
+  "phoneNumber": "1523441245467"
+}
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Козлов",
+  "name": "Учение № 8",
+  "patronymic": "Платонович",
+  "phoneNumber": "15234524467"
+}
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Козлов",
+  "name": "Учение № 9",
+  "patronymic": "Платонович",
+  "phoneNumber": "151472345467"
+}
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Козлов",
+  "name": "Учение № 10",
+  "patronymic": "Платонович",
+  "phoneNumber": "152443445467"
+}
+
+### add Apprentice
+POST localhost:8084/apprentice
+content-type:application/json
+
+{
+  "surname" : "Козлов",
+  "name": "Учение № 11",
+  "patronymic": "Платонович",
+  "phoneNumber": "152342475467"
+}
+
+### get all Apprentice
+GET localhost:8084/apprentice
+
+### get Apprentice by id
+GET localhost:8084/apprentice/1
+
+### get Apprentice by incorrect id
+GET localhost:8084/apprentice/100
+
+
+### remove Apprentice by id
+DELETE localhost:8084/apprentice/3
+
+### update Apprentice
+PUT localhost:8084/apprentice
+content-type:application/json
+
+{
+  "id": 1,
+  "surname" : "Мартынов",
+  "name": "Учение № 1",
+  "patronymic": "Германович",
+  "phoneNumber": "123445567"
+}
+
+### update Apprentice
+PUT localhost:8084/apprentice
+content-type:application/json
+
+{
+  "id": 2,
+  "surname" : "Селезнев",
+  "name": "Учение № 1",
+  "patronymic": "Германович",
+  "phoneNumber": "123874567"
+}
+
+### update Apprentice
+PUT localhost:8084/apprentice
+content-type:application/json
+
+{
+  "id": 3,
+  "surname" : "Панов",
+  "name": "Учение № 1",
+  "patronymic": "Германович",
+  "phoneNumber": "123478567"
+}
+
+### update Apprentice erorr
+PUT localhost:8084/apprentice
+content-type:application/json
+
+{
+  "id": 4,
+  "surname" : "Шаров",
+  "name": "Учение № 1",
+  "patronymic": "Германович",
+  "phoneNumber": "123411567"
+}
+
+
+
+###
+#--------------------------------------Training-----------------------------------
+
+### add Training
+POST localhost:8084/training/1/1
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "06.01.2025",
+  "timeStart": "09:00"
+}
+
+### add Training
+POST localhost:8084/training/2/2
+content-type:application/json
+
+{
+  "numberGym": 2,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add Training
+POST localhost:8084/training/3/3
+content-type:application/json
+
+{
+  "numberGym": 3,
+  "date": "14.01.2025",
+  "timeStart": "09:00"
+}
+
+### add Training
+POST localhost:8084/training/4/4
+content-type:application/json
+
+{
+"numberGym": 4,
+"date": "16.01.2025",
+  "timeStart": "09:00"
+}
+
+### add Training
+POST localhost:8084/training/5/5
+content-type:application/json
+
+{
+  "numberGym": 5,
+  "date": "17.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training нет к примеру ученника
+POST localhost:8084/training/2/40
+content-type:application/json
+
+{
+  "numberGym": 6,
+  "date": "22.01.2022",
+  "timeStart": "20:00"
+}
+
+###
+#------------------------------------------------------------------------
+
+### add erorr Training "Тренер не работает в выбранный день"
+POST localhost:8084/training/1/3
+content-type:application/json
+
+{
+  "numberGym": 2,
+  "date": "24.04.2025",
+  "timeStart": "23:10"
+}
+
+
+
+
+### add erorr Training "Тренер уже имеет 3 или более тренировок в это время"
+POST localhost:8084/training/1/2
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "06.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "Тренер уже имеет 3 или более тренировок в это время"
+POST localhost:8084/training/1/3
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "06.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "Тренер уже имеет 3 или более тренировок в это время"
+POST localhost:8084/training/1/4
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "06.01.2025",
+  "timeStart": "09:00"
+}
+
+
+
+
+
+
+
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/1/1
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/1/2
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/1/3
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/2/5
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/2/6
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/3/7
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/3/8
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/3/9
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/4/10
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/4/11
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+### add erorr Training "В зале уже максимальное количество тренировок (10) в это время"
+POST localhost:8084/training/5/1
+content-type:application/json
+
+{
+  "numberGym": 1,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+
+### add erorr Training "Ученик в один день не может присутствовать сразу на нескольких тренировках"
+POST localhost:8084/training/5/1
+content-type:application/json
+
+{
+  "numberGym": 2,
+  "date": "08.01.2025",
+  "timeStart": "09:00"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### get Training by training
+GET localhost:8084/training/1
+
+### get Training by training
+GET localhost:8084/training/1
+
+### get Training by training not exists
+GET localhost:8084/training/100
+
+### get Training by trainerId
+GET localhost:8084/training/trainer/1
+
+### get Training by trainerId not exists
+GET localhost:8084/training/trainer/100
+
+### get Training by apprenticeId
+GET localhost:8084/training/apprentice/1
+
+### get Training by apprenticeId not exists
+GET localhost:8084/training/apprentice/100
+
+
+
+### get Training by trainer dayOfTheWeek
+GET localhost:8084/training/1?dayOfTheWeek=monday
+
+### get Training by numberGym and data
+GET localhost:8084/training/7?date=22-01-2022
+
+### get Training by apprenticeId and data
+GET localhost:8084/training/1?date=08-01-2025
+
+### remove Apprentice by id
+DELETE localhost:8084/training/3
+
+### remove Apprentice by id  not exists
+DELETE localhost:8084/training/100
+
+
+
+
+
+###
+#--------------------------------------Trainer_schedules-----------------------------------
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/1?dayOfTheWeek=monday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/1?dayOfTheWeek=tuesday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/1?dayOfTheWeek=wednesday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/1?dayOfTheWeek=Thursday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/1?dayOfTheWeek=Friday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/1?dayOfTheWeek=Saturday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/1?dayOfTheWeek=Saturday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/1?dayOfTheWeek=Saturday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/1?dayOfTheWeek=Saturday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/1?dayOfTheWeek=Saturday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/2?dayOfTheWeek=wednesday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/3?dayOfTheWeek=wednesday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/4?dayOfTheWeek=wednesday&localTimeStart=09:00&localTimeEnd=23:00
+
+### add Trainer_schedules
+POST localhost:8084/trainerSchedule/5?dayOfTheWeek=wednesday&localTimeStart=09:00&localTimeEnd=23:00
+
+
+
+### add Trainer_schedules not exists
+POST localhost:8084/trainerSchedule/100?dayOfTheWeek=Saturday&localTimeStart=17:00&localTimeEnd=19:00
+
+
+### get Trainer_schedules by id
+GET localhost:8084/trainerSchedule/1
+
+### get Trainer_schedules by id
+GET localhost:8084/trainerSchedule/2
+
+### get Trainer_schedules by id does not exists
+GET localhost:8084/trainerSchedule/100
+
+### get Trainer_schedules by id does not training
+GET localhost:8084/trainerSchedule/5
+
+
+
+
+
+### remove Trainer_schedules by id
+DELETE localhost:8084/trainerSchedule/1?dayOfTheWeek=monday
+
+### remove Trainer_schedules by trainer id  not exists
+DELETE localhost:8084/trainerSchedule/100?dayOfTheWeek=monday

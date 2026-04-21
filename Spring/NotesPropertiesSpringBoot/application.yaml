@@ -1,0 +1,12 @@
+projects-compliments:
+  complimentList:
+    - id: 1
+      text: "Ты молодец!"
+    - id: 2
+      text: "Отличная работа!"
+    - id: 3
+      text: "Ты супер!"
+    - id: 4
+      text: "Ты машина"
+    - id: 5
+      text: "Ты красавчик"

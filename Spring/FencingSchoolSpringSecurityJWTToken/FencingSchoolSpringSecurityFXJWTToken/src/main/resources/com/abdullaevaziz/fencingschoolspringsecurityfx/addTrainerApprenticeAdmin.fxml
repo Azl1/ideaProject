@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.fencingschoolspringsecurityfx.controllers.AddTrainerApprenticeAdminController">
+
+    <HBox alignment="CENTER" layoutX="114.0" layoutY="14.0" prefHeight="55.0" prefWidth="315.0" spacing="20">
+        <RadioButton fx:id="radioButTrainer" onAction="#radioButtonTrainer" selected="true" text="Тренер">
+            <toggleGroup>
+                <ToggleGroup fx:id="userTypeToggleGroup" />
+            </toggleGroup>
+        </RadioButton>
+
+        <RadioButton fx:id="radioButApprentice" onAction="#radioButtonApprentice" text="Ученик" toggleGroup="$userTypeToggleGroup" userData="APPRENTICE" />
+        <RadioButton fx:id="radioButAdmin" layoutX="178.0" layoutY="29.0" onAction="#radioButtonAdmin" text="Администратор" toggleGroup="$userTypeToggleGroup" userData="ADMIN">
+        </RadioButton>
+    </HBox>
+
+    <Label layoutX="141.0" layoutY="110.0" prefHeight="35.0" prefWidth="103.0" text="Фамилия" />
+    <TextField fx:id="textFiledSurname" layoutX="254.0" layoutY="115.0" />
+    <Label layoutX="141.0" layoutY="147.0" prefHeight="35.0" prefWidth="103.0" text="Имя" />
+    <TextField fx:id="textFiledName" layoutX="254.0" layoutY="152.0" />
+    <Label layoutX="141.0" layoutY="187.0" prefHeight="35.0" prefWidth="103.0" text="Отчество" />
+    <TextField fx:id="textFiledPatronymic" layoutX="254.0" layoutY="192.0" />
+    <Label fx:id="labelParameter" layoutX="141.0" layoutY="255.0" prefHeight="35.0" prefWidth="103.0" text="Опыт" />
+    <TextField fx:id="textFieldParameter" layoutX="254.0" layoutY="260.0" />
+
+    <Button layoutX="442.0" layoutY="141.0" onAction="#buttonSave" prefHeight="102.0" prefWidth="117.0" text="Сохранить" />
+    <Label fx:id="labelEmail" layoutX="141.0" layoutY="294.0" prefHeight="35.0" prefWidth="103.0" text="Email" />
+    <TextField fx:id="textFieldEmail" layoutX="254.0" layoutY="299.0" />
+    <Label layoutX="141.0" layoutY="69.0" prefHeight="35.0" prefWidth="103.0" text="Логин" />
+    <TextField fx:id="textFiledFirstLogin" layoutX="254.0" layoutY="74.0" />
+    <Label layoutX="141.0" layoutY="222.0" prefHeight="35.0" prefWidth="103.0" text="Пароль" />
+    <TextField fx:id="textFiledPassword" layoutX="254.0" layoutY="227.0" />
+    <Label fx:id="labelSalary" layoutX="141.0" layoutY="329.0" prefHeight="35.0" prefWidth="103.0" text="Зарплата" />
+    <TextField fx:id="textFieldSalary" layoutX="254.0" layoutY="334.0" />
+
+</AnchorPane>

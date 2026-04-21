@@ -1,0 +1,68 @@
+POST http://localhost:8080/user
+content-type: application/json
+
+{
+  "userName": "Kirill",
+  "password": "123"
+}
+
+### Работает без аутентификации
+POST http://localhost:8080/
+
+### Работает без аутентификации
+GET http://localhost:8080/user/welcome
+
+### Не Работает без аутентификации
+GET http://localhost:8080/admin/welcome
+
+### Работает с аутентификацией
+GET http://localhost:8080/admin/welcome
+Authorization: Basic Kirill 123
+
+### Работает без аутентификации, так как сеанс уже сохранен
+GET http://localhost:8080/admin/welcome
+
+
+### Получить user без аутентификации не работает
+GET http://localhost:8080/user
+
+### Получить user c неверным логином не работает
+GET http://localhost:8080/user
+Authorization: Basic Zuyek 123
+
+### Получить user c неверным паролем не работает
+GET http://localhost:8080/user
+Authorization: Basic Kirill ttt
+
+### Получить user с аутентификацией
+GET http://localhost:8080/user
+Authorization: Basic Kirill 123
+
+### Аутентификация в клиенте Java
+#URL url = new URL(“location address”);
+#URLConnection uc = url.openConnection();
+#String userpass = username + ":" + password;
+#String basicAuth = "Basic " + new String(Base64.getEncoder().encode(userpass.getBytes()));
+#uc.setRequestProperty ("Authorization", basicAuth);
+#InputStream in = uc.getInputStream();
+
+### Retrofit auth
+#OkHttpClient client = new OkHttpClient.Builder()
+#.addInterceptor(new BasicAuthInterceptor(username, password))
+#.build();
+
+#public class BasicAuthInterceptor implements Interceptor {
+
+#    private String credentials;
+
+#    public BasicAuthInterceptor(String user, String password) {
+#        this.credentials = Credentials.basic(user, password);
+#    }
+#    @Override
+#    public Response intercept(Chain chain) throws IOException {
+#        Request request = chain.request();
+#        Request authenticatedRequest = request.newBuilder()
+#                .header("Authorization", credentials).build();
+#        return chain.proceed(authenticatedRequest);
+#    }
+#}

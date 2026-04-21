@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.quizspringbootfx.controllers.HistoryController">
+   <children>
+      <ListView fx:id="getHistoryListView" layoutX="16.0" layoutY="41.0" prefHeight="297.0" prefWidth="567.0" />
+      <Button layoutX="60.0" layoutY="349.0" mnemonicParsing="false" onAction="#buttonExit" prefHeight="36.0" prefWidth="98.0" text="Exit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.fencingschoolfx.controllers.AddTrainingController">
+
+      <HBox alignment="CENTER" layoutX="114.0" layoutY="14.0" prefHeight="55.0" prefWidth="315.0" spacing="20">
+         <RadioButton fx:id="radioButTrainer" onAction="#radioButtonTrainer" selected="true" text="Тренер">
+         <toggleGroup>
+            <ToggleGroup fx:id="userTypeToggleGroup" />
+         </toggleGroup></RadioButton>
+
+         <RadioButton fx:id="radioButApprentice" onAction="#radioButtonApprentice" text="Ученик" toggleGroup="$userTypeToggleGroup" userData="APPRENTICE" />
+      </HBox>
+
+   <Label layoutX="141.0" layoutY="93.0" prefHeight="35.0" prefWidth="103.0" text="Фамилия" />
+   <TextField fx:id="textFiledFirstName" layoutX="254.0" layoutY="98.0" />
+   <Label layoutX="141.0" layoutY="147.0" prefHeight="35.0" prefWidth="103.0" text="Имя" />
+   <TextField fx:id="textFiledName" layoutX="254.0" layoutY="152.0" />
+   <Label layoutX="141.0" layoutY="200.0" prefHeight="35.0" prefWidth="103.0" text="Отчество" />
+   <TextField fx:id="textFiledPatronymic" layoutX="254.0" layoutY="205.0" />
+   <Label fx:id="labelParameter" layoutX="141.0" layoutY="255.0" prefHeight="35.0" prefWidth="103.0" text="Номер телефона" />
+   <TextField fx:id="textFieldParameter" layoutX="254.0" layoutY="260.0" />
+
+    <Button layoutX="466.0" layoutY="326.0" onAction="#buttonSave" text="Сохранить" />
+
+</AnchorPane>

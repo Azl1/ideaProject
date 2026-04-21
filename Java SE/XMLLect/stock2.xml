@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Stock>
+    <address>Moscow</address>
+    <list>
+        <tv>
+            <brand>Samsung</brand>
+            <model>K900</model>
+            <color>Black</color>
+            <timeExpectancy>10</timeExpectancy>
+            <price>20000.0</price>
+        </tv>
+        <tv>
+            <brand>Panasonic</brand>
+            <model>T45</model>
+            <color>White</color>
+            <timeExpectancy>10</timeExpectancy>
+            <price>30000.0</price>
+        </tv>
+        <tv>
+            <brand>Telefunken</brand>
+            <model>E45</model>
+            <color>Black</color>
+            <timeExpectancy>20</timeExpectancy>
+            <price>20000.0</price>
+        </tv>
+    </list>
+</Stock>

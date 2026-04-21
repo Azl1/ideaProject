@@ -1,0 +1,55 @@
+### Добавление нового пользователя JSON
+POST http://localhost:8080/user
+content-type: application/json;charset=utf-8
+
+{
+  "login": "Kek",
+  "password": "123",
+  "name": "Alex"
+}
+
+### Добавление нового пользователя JSON
+POST http://localhost:8080/user
+content-type: application/json;charset=utf-8
+
+{
+  "login": "Kek1",
+  "password": "123",
+  "name": "Alex"
+}
+
+### GET all
+GET http://localhost:8080/user
+
+###GET by id(path variable)
+GET http://localhost:8080/user/1
+
+###GET by id(path variable) - incorrect
+GET http://localhost:8080/user/100
+
+###DELETE by id (path variable)
+DELETE http://localhost:8080/user/1
+
+###DELETE by id (path variable) - incorrect
+DELETE http://localhost:8080/user/100
+
+###all by field
+DELETE http://localhost:8080/user?name=alex
+
+###all by field(path variable) - incorrect
+DELETE http://localhost:8080/user/name/karl
+
+###PUT request body
+PUT http://localhost:8080/user
+content-type: application/json;charset=utf-8
+
+{
+  "id" : 1,
+  "login": "1",
+  "password": "1",
+  "name": "1"
+}
+
+
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="572.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.fileuploaderspringbootfx.controllers.ChoseUserController">
+   <children>
+      <Label layoutX="137.0" layoutY="38.0" prefHeight="46.0" prefWidth="125.0" text="Chose user" />
+      <ListView fx:id="listView" layoutX="28.0" layoutY="95.0" prefHeight="363.0" prefWidth="323.0" />
+      <Button layoutX="142.0" layoutY="488.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="36.0" prefWidth="90.0" text="Exit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+### add new user
+POST localhost:8075/user
+content-type: application/json
+
+{
+  "userName": "a",
+  "firstName": "a",
+  "lastName": "a",
+  "email": "blackgod.kn-soft@mail.ru",
+  "password": "a"
+}
+
+### add new user
+POST localhost:8075/user
+content-type: application/json
+
+{
+  "userName": "b",
+  "firstName": "b",
+  "lastName": "b",
+  "email": "b@mail.ru",
+  "password": "b"
+}
+
+### authentification by admin
+POST http://localhost:8075/user/authentication?userName=kirill&password=kirill
+
+### authentification by simple user
+POST localhost:8075/user/authentication?userName=a&password=a
+
+### add role by wrong token, not working
+POST localhost:8075/role
+content-type: application/json
+Authorization: Bearer_askjvbskjdvsvd.szvsdafb.agababasd
+
+{
+  "name": "ROLE_USER"
+}
+
+### add role by wrong permission, not working
+POST localhost:8075/role
+content-type: application/json
+Authorization: Bearer_{{simple}}
+
+{
+  "name": "ROLE_USER"
+}
+
+### add role by admin
+POST localhost:8075/role
+Authorization: Bearer_{{admin}}
+content-type: application/json
+
+{
+  "name": "ROLE_USER"
+}
+
+### add role to user by admin
+PUT localhost:8075/user/2/2
+Authorization: Bearer_{{admin}}
+
+### add role to user without authrization, not working
+PUT localhost:8075/user/2/2
+
+### add role to user by simple user, not working
+PUT localhost:8075/user/2/2
+Authorization: Bearer_{{simple}}
+
+### get user without authrization, not working
+GET localhost:8075/user/1
+
+### get user by simple user, not working
+GET localhost:8075/user/1
+Authorization: Bearer_{{simple}}
+
+### get user by admin
+GET localhost:8075/user/1
+Authorization: Bearer_{{admin}}

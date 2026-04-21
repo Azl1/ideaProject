@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kirillkotov.javafxlect.controllers.MainController">
+   <children>
+      <Label layoutX="24.0" layoutY="23.0" text="FIO" />
+      <Label layoutX="22.0" layoutY="84.0" text="Age" />
+      <TextField fx:id="textFieldFIO" layoutX="24.0" layoutY="41.0" prefHeight="26.0" prefWidth="292.0" />
+      <TextField fx:id="textFieldAge" layoutX="24.0" layoutY="102.0" prefHeight="26.0" prefWidth="292.0" />
+      <Button layoutX="24.0" layoutY="142.0" mnemonicParsing="false" onAction="#buttonSave" prefHeight="26.0" prefWidth="116.0" text="Save" />
+      <Label layoutX="339.0" layoutY="23.0" text="Address" />
+      <ComboBox fx:id="comboBoxAddresses" layoutX="339.0" layoutY="42.0" prefHeight="26.0" prefWidth="242.0" />
+      <ListView fx:id="listViewUsers" layoutX="22.0" layoutY="186.0" prefHeight="200.0" prefWidth="643.0" />
+      <Button layoutX="24.0" layoutY="400.0" mnemonicParsing="false" onAction="#buttonDelete" text="Delete" />
+      <DatePicker fx:id="datePickerBirthDay" layoutX="339.0" layoutY="102.0" prefHeight="26.0" prefWidth="242.0" />
+      <Label layoutX="339.0" layoutY="84.0" text="Birthday" />
+   </children>
+</AnchorPane>

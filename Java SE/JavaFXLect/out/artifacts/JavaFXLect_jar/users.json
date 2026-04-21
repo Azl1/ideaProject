@@ -1,0 +1,42 @@
+[
+  {
+    "id": 2,
+    "fio": "ваав",
+    "age": 1,
+    "address": {
+      "city": "Moscow",
+      "street": "Win avenue"
+    },
+    "birthDay": "13.06.2024"
+  },
+  {
+    "id": 3,
+    "fio": "ваав",
+    "age": 1,
+    "address": {
+      "city": "Moscow",
+      "street": "Win avenue"
+    },
+    "birthDay": "13.06.2024"
+  },
+  {
+    "id": 4,
+    "fio": "ваав",
+    "age": 12,
+    "address": {
+      "city": "Fethiye",
+      "street": "Ata turk sokak"
+    },
+    "birthDay": "13.06.2024"
+  },
+  {
+    "id": 5,
+    "fio": "пав",
+    "age": 65,
+    "address": {
+      "city": "Fethiye",
+      "street": "Ata turk sokak"
+    },
+    "birthDay": "18.07.2024"
+  }
+]

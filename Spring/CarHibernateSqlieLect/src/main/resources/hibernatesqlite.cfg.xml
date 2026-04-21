@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="connection.url">jdbc:sqlite:cars.db</property>
+        <property name="dialect">org.sqlite.hibernate.dialect.SQLiteDialect</property>
+        <property name="generate_statistics">false</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+
+        <mapping class="model.Person"/>
+        <mapping class="model.Account"/>
+        <mapping class="model.Position"/>
+        <mapping class="model.Car"/>
+        <mapping class="model.Hotel"/>
+
+    </session-factory>
+</hibernate-configuration>

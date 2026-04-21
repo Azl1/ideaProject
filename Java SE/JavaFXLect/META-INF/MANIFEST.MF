@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Main-Class: com.kirillkotov.javafxlect.program.Program
+Class-Path: javafx-base-19-ea+7.jar jackson-annotations-2.14.2.jar javaf
+ x-base-19-ea+7-win.jar javafx-controls-19-ea+7-win.jar jackson-datatype
+ -jsr310-2.14.2.jar javafx-graphics-19-ea+7.jar javafx-graphics-19-ea+7-
+ win.jar jackson-core-2.14.2.jar javafx-controls-19-ea+7.jar javafx-fxml
+ -19-ea+7-win.jar jackson-databind-2.14.2.jar javafx-fxml-19-ea+7.jar
+

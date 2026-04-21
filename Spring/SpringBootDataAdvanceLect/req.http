@@ -1,0 +1,257 @@
+### POST user
+POST localhost:8080/user
+content-type: application/json
+
+{
+  "login" : "petr123",
+  "firstName" : "Petr",
+  "lastName" : "Petrov"
+}
+
+### POST use
+POST localhost:8080/user
+content-type: application/json
+
+{
+  "login" : "ivan1",
+  "firstName" : "Ivan",
+  "lastName" : "Ivanov"
+}
+
+### POST user
+POST localhost:8080/user
+content-type: application/json
+
+{
+  "login" : "sidr",
+  "firstName" : "Sidr",
+  "lastName" : "Sidorov"
+}
+
+### POST user incorrect
+POST localhost:8080/user
+content-type: application/json
+
+{
+  "login" : "petr123",
+  "firstName" : "Petr",
+  "lastName" : "Petrov"
+}
+
+### GET all users
+GET localhost:8080/user
+
+### GET user by id
+GET localhost:8080/user/1
+
+### GET user by id incorrect
+GET localhost:8080/user/100
+
+### DELETE user by id
+DELETE localhost:8080/user/1
+
+### DELETE user by id
+DELETE localhost:8080/user/100
+
+### PUT user
+PUT localhost:8080/user
+content-type: application/json
+
+{
+  "id" : 2,
+  "login" : "demidov",
+  "firstName" : "Denis",
+  "lastName" : "Demidov"
+}
+
+### PUT user incorrect id
+PUT localhost:8080/user
+content-type: application/json
+
+{
+  "id" : 1,
+  "login" : "petr123",
+  "firstName" : "Petr",
+  "lastName" : "Petrov"
+}
+
+### PUT user incorrect constraint
+PUT localhost:8080/user
+content-type: application/json
+
+{
+  "id" : 3,
+  "login" : "demidov",
+  "firstName" : "Denis",
+  "lastName" : "Demidov"
+}
+
+### GET all by firstname
+GET localhost:8080/user/search/firstname?firstName=Denis
+
+### GET all by firstname and lastname
+GET localhost:8080/user/search?firstName=Denis&lastName=Demidov
+
+### GET all sort asc
+GET localhost:8080/user/all/asc
+
+### GET all sort desc
+GET localhost:8080/user/all/desc
+
+### POST tv
+POST localhost:8080/tv/1
+content-type: application/json
+
+{
+  "brand" : "Samsung",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### POST tv
+POST localhost:8080/tv/1
+content-type: application/json
+
+{
+  "brand" : "Panasonic",
+  "model" : "E45",
+  "color" : "White",
+  "timeExpectancy" : 10,
+  "price" : 10000,
+  "produceDate" : "14.12.2000"
+}
+
+### POST tv
+POST localhost:8080/tv/2
+content-type: application/json
+
+{
+  "brand" : "Panasonic",
+  "model" : "E45",
+  "color" : "White",
+  "timeExpectancy" : 10,
+  "price" : 10000,
+  "produceDate" : "14.12.2000"
+}
+
+### POST tv
+POST localhost:8080/tv/3
+content-type: application/json
+
+{
+  "brand" : "Sumsung",
+  "model" : "R35",
+  "color" : "White",
+  "timeExpectancy" : 10,
+  "price" : 11000,
+  "produceDate" : "14.12.2001"
+}
+
+
+### POST tv incorrect constraint
+POST localhost:8080/tv/1
+content-type: application/json
+
+{
+  "brand" : "Samsung",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### POST tv incorrect userId
+POST localhost:8080/tv/100
+content-type: application/json
+
+{
+  "brand" : "Samsung",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### GET all tv
+GET localhost:8080/tv
+
+### GET tv by id
+GET localhost:8080/tv/1
+
+### GET tv by first name
+GET localhost:8080/tv/search/firstName?firstName=Petr
+
+### GET tv by id incorrect
+GET localhost:8080/tv/100
+
+### GET all tv by brand and model
+GET localhost:8080/tv/search?brand=Samsung&model=K900
+
+### GET all tv by brand and model incorrect
+GET localhost:8080/tv/search?brand=Samsung&model=K9000
+
+### GET all tv by brands in list
+GET localhost:8080/tv/search/brands
+content-type: application/json
+
+["Samsung", "Panasonic"]
+
+### GET all tv by brands in list incorrect
+GET localhost:8080/tv/search/brands
+content-type: application/json
+
+["Telefunken"]
+
+### PUT tv
+PUT localhost:8080/tv
+content-type: application/json
+
+{
+  "id" : 1,
+  "brand" : "Gnusmas",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### PUT tv incorrect constraint
+PUT localhost:8080/tv
+content-type: application/json
+
+{
+  "id" : 19,
+  "brand" : "Panasonic",
+  "model" : "E45",
+  "color" : "Black",
+  "timeExpectancy" : 19,
+  "price" : 20000,
+  "produceDate" : "14.11.1996"
+}
+
+### DELETE tv by id
+DELETE localhost:8080/tv/1
+
+### DELETE tv by id incorrect
+DELETE localhost:8080/tv/100
+
+### DELETE tv by brand and color
+DELETE localhost:8080/tv/delete/brand_color?brand=Panasonic&color=White
+
+### DELETE tv by brand and color incorrect
+DELETE localhost:8080/tv/delete/brand_color?brand=Panasonic&color=Black
+
+### DELETE tv by brand and model
+DELETE localhost:8080/tv/delete/brand_model?brand=Panasonic&model=E45
+
+### DELETE tv by brand and model
+DELETE localhost:8080/tv/delete/brand_model?brand=Panasonic&model=E45
+
+### PUT tv by brand and model
+PUT localhost:8080/tv/update/brand_color?brand=Panasonic&color=Back

@@ -1,0 +1,46 @@
+### add new User
+POST http://localhost:8080/users
+content-type:application/json
+
+{
+  "login": "ivan-ivanych@yandex.ru",
+  "firstName": "Ivan",
+  "lastName": "Ivan"
+}
+
+### add new User
+POST http://localhost:8080/users
+content-type:application/json
+
+{
+  "login" : "petr123",
+  "firstName" : "Petr",
+  "lastName" : "Petrov"
+}
+
+### get all Users
+GET http://localhost:8080/users
+
+### get by id
+GET http://localhost:8080/users/6683d8e2f9710d762a7a24ab
+
+### get All by firstName
+GET http://localhost:8080/users/findByFirstName?firstName=Petr
+
+### get by login
+GET http://localhost:8080/users/findByLogin?login=petr123
+
+### delete by Id
+DELETE http://localhost:8080/users/6683d8e2f9710d762a7a24ab
+
+###
+PUT http://localhost:8080/users
+content-type:application/json
+
+{
+  "id": "6683d8fff9710d762a7a24ac",
+  "login": "petr1234567",
+  "firstName": "Petr",
+  "lastName": "Petrov"
+}
+

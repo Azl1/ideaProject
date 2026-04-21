@@ -1,0 +1,79 @@
+
+### add Coupons
+POST localhost:8084/coupons
+Content-Type: application/json
+
+{
+  "name": "Летняя распродажа",
+  "company": "Nike",
+  "expire": 1
+}
+
+### add Coupons
+POST localhost:8084/coupons
+Content-Type: application/json
+
+{
+  "name": "Зимняя  распродажа",
+  "company": "Adidas",
+  "expire": 1
+}
+
+### add Coupons
+POST localhost:8084/coupons
+Content-Type: application/json
+
+{
+  "name": "Осенняя  распродажа",
+  "company": "Abibas",
+  "expire": 3
+}
+
+
+
+### get Coupons
+GET localhost:8084/coupons/1
+Content-Type: application/json
+
+### get Coupons
+GET localhost:8084/coupons/2
+Content-Type: application/json
+
+### get Coupons erorr
+GET localhost:8084/coupons/100
+Content-Type: application/json
+
+
+
+### get Coupons all
+GET localhost:8084/coupons
+Content-Type: application/json
+
+### get Coupons company
+GET localhost:8084/coupons/company/Nike
+Content-Type: application/json
+
+### get Coupons company get Expiring Today
+GET localhost:8084/coupons/expiring-today
+Content-Type: application/json
+
+
+### delete Coupons company
+DELETE localhost:8084/coupons/1
+Content-Type: application/json
+
+### delete Coupons company erorr (Coupon does not exists!)
+DELETE localhost:8084/coupons/1
+Content-Type: application/json
+
+### delete Coupons company
+DELETE localhost:8084/coupons/company/Nike
+Content-Type: application/json
+
+### delete Coupons company
+DELETE localhost:8084/coupons/company/Nike
+Content-Type: application/json
+
+### delete Coupons company
+DELETE localhost:8084/coupons/expired?date=2025-05-08
+Content-Type: application/json

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.quizspringbootfx.controllers.LoadingFormController">
+   <children>
+      <Label fx:id="labelNumberOfQuestions" layoutX="226.0" layoutY="23.0" prefHeight="29.0" prefWidth="210.0" text="Number of questions" />
+      <TextField fx:id="textFieldNumberOfQuestions" layoutX="213.0" layoutY="64.0" prefHeight="29.0" prefWidth="210.0" />
+      <Label fx:id="labelSelectCategory" layoutX="52.0" layoutY="99.0" prefHeight="29.0" prefWidth="151.0" text="Select Category" />
+      <Label fx:id="labelSelectDifficulty" layoutX="407.0" layoutY="99.0" prefHeight="29.0" prefWidth="151.0" text="Select Difficulty" />
+      <ComboBox fx:id="comboBoxLoadingCategory" layoutX="14.0" layoutY="146.0" prefHeight="85.0" prefWidth="250.0" />
+      <ComboBox fx:id="comboBoxLoadingDifficulty" layoutX="331.0" layoutY="146.0" prefHeight="85.0" prefWidth="250.0" />
+      <Label fx:id="labelStart" layoutX="64.0" layoutY="253.0" prefHeight="29.0" prefWidth="151.0" text="Старт" />
+      <Label fx:id="labelSave" layoutX="331.0" layoutY="253.0" prefHeight="29.0" prefWidth="151.0" text="Сохранить" />
+      <Button layoutX="14.0" layoutY="293.0" mnemonicParsing="false" onAction="#buttonStart" prefHeight="85.0" prefWidth="250.0" text="Start" />
+      <Button layoutX="336.0" layoutY="293.0" mnemonicParsing="false" onAction="#buttonExit" prefHeight="86.0" prefWidth="250.0" text="Save and exit" />
+   </children>
+</AnchorPane>

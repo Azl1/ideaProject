@@ -1,0 +1,183 @@
+### add Student
+POST localhost:8082/student
+content-type:application/json
+
+{
+  "fio" : "Иванов",
+  "age" : 28,
+  "num" : 10,
+  "salary" : 2000
+}
+
+### add Student
+POST localhost:8082/student
+content-type:application/json
+
+{
+  "fio" : "Петров",
+  "age" : 30,
+  "num" : 11,
+  "salary" : 3000
+}
+
+### add Student
+POST localhost:8082/student
+content-type:application/json
+
+{
+  "fio" : "Сидоров",
+  "age" : 31,
+  "num" : 12,
+  "salary" : 4000
+}
+
+### get all Student
+GET localhost:8082/student
+
+### get Student by id
+GET localhost:8082/student/1
+
+### get Student by incorrect id
+GET localhost:8082/student/100
+
+### get all Student by brand
+GET localhost:8082/student/search?num=10
+
+### remove Student by id
+DELETE localhost:8082/student/1
+
+### update Student
+PUT localhost:8082/student/
+content-type:application/json
+
+{
+  "id" : 2,
+  "fio" : "Березин",
+  "age" : 35,
+  "num" : 12,
+  "salary" : 7000
+}
+
+### update Student
+PUT localhost:8082/student/
+content-type:application/json
+
+{
+  "id" : 1,
+  "fio" : "Иванов",
+  "age" : 28,
+  "num" : 10,
+  "salary" : 2000
+
+}
+
+### update Student
+PUT localhost:8082/student/
+content-type:application/json
+
+{
+  "id" : 100,
+  "fio" : "Иванов",
+  "age" : 28,
+  "num" : 10,
+  "salary" : 2000
+}
+
+
+
+
+
+### add Auto
+POST localhost:8082/auto/2
+content-type:application/json
+
+{
+  "brand" : "Мерс",
+  "power" : 2000,
+  "year" : 2022
+}
+
+### add Auto
+POST localhost:8082/auto/3
+content-type:application/json
+
+{
+  "brand" : "БМВ",
+  "power" : 2000,
+  "year" : 2023
+}
+
+### add Auto
+POST localhost:8082/auto/3
+content-type:application/json
+
+{
+  "brand" : "Лексус",
+  "power" : 3000,
+  "year" : 2025
+}
+
+### add Auto
+POST localhost:8082/auto/3
+content-type:application/json
+
+{
+"brand" : "KIA",
+"power" : 2002,
+"year" : 2024
+}
+
+
+### get all Auto
+GET localhost:8082/auto
+
+### get Auto by id
+GET localhost:8082/auto/3
+
+### get Auto by incorrect id
+GET localhost:8082/auto/100
+
+### get all Auto by brand
+GET localhost:8082/auto/search?brand=БМВ
+
+### remove Auto by id
+DELETE localhost:8082/auto/1
+
+### update Auto
+PUT localhost:8082/auto
+content-type:application/json
+
+{
+  "id": 2,
+  "brand": "Лада",
+  "power": 1000,
+  "year": 2024
+}
+
+### update Auto
+PUT localhost:8082/auto
+content-type:application/json
+
+{
+  "id": 2,
+  "brand": "Рено",
+  "power": 15000,
+  "year": 2013
+}
+
+### update Auto
+PUT localhost:8082/auto
+content-type:application/json
+
+{
+  "id": 2,
+  "brand": "Мустанг",
+  "power": 5000,
+  "year": 2025
+}
+
+### get Auto by id
+GET localhost:8082/auto/student/3
+
+### delete Auto by id
+DELETE localhost:8082/auto/1

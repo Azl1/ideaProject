@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact name="JavaFXLect:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaFXLect_jar</output-path>
+    <root id="root">
+      <element id="archive" name="JavaFXLect.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="JavaFXLect" />
+      </element>
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:19-ea+7" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.14.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:19-ea+7" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:19-ea+7" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:19-ea+7" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:19-ea+7" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:19-ea+7" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:19-ea+7" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.14.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:19-ea+7" />
+    </root>
+  </artifact>
+</component>

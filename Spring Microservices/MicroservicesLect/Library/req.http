@@ -1,0 +1,12 @@
+### add Book
+POST localhost:8081/book
+content-type:application/json
+
+{
+  "name" : "q",
+  "author" : "q",
+  "studentId" : 1
+}
+
+### delete all by studet id
+DELETE localhost:8081/book/deleteAllByStudentId/1

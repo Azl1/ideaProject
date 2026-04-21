@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Universe>
+    <list>
+        <galaxy>
+            <name>Млечный путь</name>
+            <list>
+                <planet>
+                    <namePlanet>Нептун</namePlanet>
+                    <radius>3000</radius>
+                    <period>5000</period>
+                </planet>
+                <planet>
+                    <namePlanet>Марс</namePlanet>
+                    <radius>1500</radius>
+                    <period>7000</period>
+                </planet>
+                <planet>
+                    <namePlanet>Юпитер</namePlanet>
+                    <radius>2500</radius>
+                    <period>8000</period>
+                </planet>
+            </list>
+        </galaxy>
+        <galaxy>
+            <name>Андромед</name>
+            <list>
+                <planet>
+                    <namePlanet>Серая планета</namePlanet>
+                    <radius>250440</radius>
+                    <period>807700</period>
+                </planet>
+                <planet>
+                    <namePlanet>Желтая планет</namePlanet>
+                    <radius>222500</radius>
+                    <period>700880</period>
+                </planet>
+                <planet>
+                    <namePlanet>Зеленая планета</namePlanet>
+                    <radius>300560</radius>
+                    <period>599000</period>
+                </planet>
+            </list>
+        </galaxy>
+        <galaxy>
+            <name>Неизвестная галактика</name>
+            <list>
+                <planet>
+                    <namePlanet>Неизвестная планета 1</namePlanet>
+                    <radius>25048740</radius>
+                    <period>800540</period>
+                </planet>
+                <planet>
+                    <namePlanet>Неизвестная планета 2</namePlanet>
+                    <radius>1232500</radius>
+                    <period>705400</period>
+                </planet>
+                <planet>
+                    <namePlanet>Неизвестная планета 3</namePlanet>
+                    <radius>303200</radius>
+                    <period>50232300</period>
+                </planet>
+            </list>
+        </galaxy>
+    </list>
+</Universe>

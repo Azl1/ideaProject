@@ -1,0 +1,108 @@
+### POST user
+POST localhost:8080/user
+content-type: application/json
+
+{
+  "login" : "pewtrqwqwaa",
+  "firstName" : "Petr",
+  "lastName" : "Petrov",
+  "birthDate": "12.12.1212",
+  "email": "petr@qwewr.we",
+  "postalCode": "123123",
+  "address": "Asdds dsasa str. 12"
+}
+
+### POST user
+POST localhost:8080/user
+content-type: application/json
+
+{
+  "login" : "ivan",
+  "firstName" : "Ivan",
+  "lastName" : "Ivanoov",
+  "birthDate": "01.01.1992",
+  "email": "iivanov@ivanovy.be",
+  "postalCode": "201001",
+  "address": "Ivanova square 1"
+}
+
+### POST user
+POST localhost:8080/user
+content-type: application/json
+
+{
+  "login" : "sidr",
+  "firstName" : "Sidr",
+  "lastName" : "Sidorov",
+  "birthDate": "12.12.2012",
+  "email": "sidor@gmail.com",
+  "postalCode": "109022",
+  "address": "Sidorov avenue 128"
+}
+
+### POST user incorrect
+POST localhost:8080/user
+content-type: application/json
+
+{
+  "login" : " ",
+  "firstName" : " ",
+  "lastName" : " ",
+  "email": "qweqweqwe",
+  "birthDate": "12.12.2112",
+  "postalCode": "123",
+  "address": "Asdd"
+}
+
+### PUT User incorrect
+PUT localhost:8080/user
+content-type: application/json
+
+{
+  "id": 2,
+  "login" : "sidr",
+  "firstName" : "Sidr",
+  "lastName" : "Sidorov",
+  "birthDate": "12.12.2012",
+  "email": "sidorgmail",
+  "postalCode": "1090",
+  "address": "Sidorov avenue 128"
+}
+
+
+### POST tv
+POST localhost:8080/tv/2
+content-type: application/json
+
+{
+  "brand" : "Samsung12",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 9,
+  "price" : 20000,
+  "available": true,
+  "produceDate" : "14.11.1996",
+  "guaranteeExpiryDate": "12.12.2112",
+  "size": {
+    "width": 5,
+    "height": 5,
+    "length": 2
+  }
+}
+
+### POST tv incorrect
+POST localhost:8080/tv/2
+content-type: application/json
+
+{
+  "brand" : "  ",
+  "model" : "",
+  "price" : -2000,
+  "available": false,
+  "produceDate" : "14.11.2996",
+  "guaranteeExpiryDate": "12.12.1112",
+  "size": {
+    "width": -5,
+    "height": 0
+  }
+}

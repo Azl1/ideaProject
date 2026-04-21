@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.fencingschoolfx.controllers.TrainerAddTrainingController">
+    <children>
+        <ComboBox fx:id="trainerListBox" layoutX="11.0" layoutY="33.0" onAction="#chooseATrainer" prefHeight="36.0" prefWidth="578.0" />
+        <DatePicker fx:id="datePickerDay" layoutX="14.0" layoutY="90.0" visible="false" />
+        <ComboBox fx:id="timeBox" layoutX="14.0" layoutY="135.0" prefHeight="36.0" prefWidth="249.0" visible="false" />
+        <Label fx:id="hallNumberLabel" layoutX="14.0" layoutY="188.0" prefHeight="36.0" prefWidth="90.0" text="Номер зала" visible="false" />
+        <TextField fx:id="hallNumberTextField" layoutX="14.0" layoutY="237.0" visible="false" />
+      <Button fx:id="buttonSave" layoutX="13.0" layoutY="288.0" mnemonicParsing="false" onAction="#addTrainingButton" prefHeight="44.0" prefWidth="150.0" text="Добавить тренировку" visible="false" />
+    </children>
+</AnchorPane>

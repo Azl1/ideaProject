@@ -1,0 +1,23 @@
+
+### add Student
+POST localhost:8080/student?bookName=Chipolinp&author=Pushkin
+content-type:application/json
+
+{
+  "fio" : "Kirill",
+  "age" : 28,
+  "num" : 8111,
+  "salary": 330000
+}
+
+### delete Student
+DELETE localhost:8080/student/1
+
+
+
+
+
+
+
+
+

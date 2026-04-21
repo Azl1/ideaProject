@@ -1,0 +1,62 @@
+
+###
+POST http://localhost:8080/hosts
+content-type: application/json
+
+{
+  "name": "Великолепный"
+}
+
+###
+GET http://localhost:8080/hosts/1
+
+###
+POST http://localhost:8080/neighbourhoods
+content-type: application/json
+
+{
+  "name": "Машина",
+  "borough": "Ночь"
+}
+
+###
+GET http://localhost:8080/neighbourhoods/1
+
+###
+POST http://localhost:8080/rooms/host/1/neighbourhood/1
+content-type: application/json
+
+{
+  "name": "Clean & quiet apt home by the park",
+  "roomType" : "Private room",
+  "price" : 149.00,
+  "minimum_nights" : 1,
+  "numberOfReviews" : 9,
+  "daysOpen": 365
+}
+
+
+###
+GET http://localhost:8080/rooms/host/1/neighbourhood/1
+
+###
+GET http://localhost:8080/rooms/1
+
+
+###
+GET http://localhost:8080/neighbourhoods
+###
+GET http://localhost:8080/rooms
+
+
+###
+POST http://localhost:8080/neighbourhoods/csv?outputFileName=boroughs_export.csv
+
+###
+POST http://localhost:8080/rooms/csv?outputFileName=rooms_export.csv
+
+###
+GET http://localhost:8080/rooms/averagePrice
+
+###
+GET http://localhost:8080/rooms/Bronx/Private room/1

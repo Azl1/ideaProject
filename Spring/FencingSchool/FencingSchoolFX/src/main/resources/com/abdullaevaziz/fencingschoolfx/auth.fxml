@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.fencingschoolfx.controllers.usercontrollers.AuthorizationController"
+            style="-fx-background-image: url('terminator.jpg'); -fx-background-size: cover;">
+    <children>
+        <Button layoutX="190.0" layoutY="219.0" mnemonicParsing="false" onAction="#buttonUser" prefHeight="70.0"
+                prefWidth="246.0" text="Войти"/>
+        <Label fx:id="labelUsers" layoutX="190.0" layoutY="59.0" prefHeight="26.0" prefWidth="246.0" text="Login"/>
+        <Label fx:id="labelUsers1" layoutX="190.0" layoutY="135.0" prefHeight="26.0" prefWidth="246.0" text="Password"/>
+        <TextField fx:id="loginTextField" layoutX="189.0" layoutY="91.0" prefHeight="36.0" prefWidth="246.0"/>
+        <TextField fx:id="passwordTextField" layoutX="190.0" layoutY="160.0" prefHeight="36.0" prefWidth="246.0"/>
+        <Button layoutX="191.0" layoutY="299.0" mnemonicParsing="false" onAction="#buttonRegUser" prefHeight="70.0"
+                prefWidth="246.0" text="Нажмите чтобы зарегистрироваться" wrapText="true"/>
+    </children>
+
+
+</AnchorPane>

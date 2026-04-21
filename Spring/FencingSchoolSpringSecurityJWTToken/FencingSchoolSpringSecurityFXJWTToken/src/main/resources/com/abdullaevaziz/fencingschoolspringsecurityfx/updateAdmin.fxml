@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.fencingschoolspringsecurityfx.controllers.UpdateAdminController">
+
+    <HBox alignment="CENTER" layoutX="114.0" layoutY="14.0" prefHeight="55.0" prefWidth="315.0" spacing="20" />
+
+    <Label layoutX="141.0" layoutY="110.0" prefHeight="35.0" prefWidth="103.0" text="Фамилия" />
+    <TextField fx:id="textFiledSurname" layoutX="254.0" layoutY="115.0" />
+    <Label layoutX="141.0" layoutY="147.0" prefHeight="35.0" prefWidth="103.0" text="Имя" />
+    <TextField fx:id="textFiledName" layoutX="254.0" layoutY="152.0" />
+    <Label layoutX="141.0" layoutY="187.0" prefHeight="35.0" prefWidth="103.0" text="Отчество" />
+    <TextField fx:id="textFiledPatronymic" layoutX="254.0" layoutY="192.0" />
+
+    <Button layoutX="439.0" layoutY="76.0" onAction="#buttonUpdate" prefHeight="102.0" prefWidth="117.0" text="Сохранить" />
+    <Label fx:id="labelEmail" layoutX="141.0" layoutY="265.0" prefHeight="35.0" prefWidth="103.0" text="Email" />
+    <TextField fx:id="textFieldEmail" layoutX="254.0" layoutY="270.0" />
+    <Label layoutX="141.0" layoutY="69.0" prefHeight="35.0" prefWidth="103.0" text="Логин" />
+    <TextField fx:id="textFiledFirstLogin" layoutX="254.0" layoutY="74.0" />
+    <Label layoutX="141.0" layoutY="222.0" prefHeight="35.0" prefWidth="103.0" text="Пароль" />
+    <TextField fx:id="textFiledPassword" layoutX="254.0" layoutY="227.0" />
+    <Label fx:id="labelSalary" layoutX="141.0" layoutY="300.0" prefHeight="35.0" prefWidth="103.0" text="Зарплата" />
+    <TextField fx:id="textFieldSalary" layoutX="254.0" layoutY="305.0" />
+
+</AnchorPane>

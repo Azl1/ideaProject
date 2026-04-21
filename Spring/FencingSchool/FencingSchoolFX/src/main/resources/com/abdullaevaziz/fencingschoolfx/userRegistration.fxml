@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.fencingschoolfx.controllers.usercontrollers.RegistrationController">
+
+    <children>
+        <Label layoutX="205.0" layoutY="8.0" prefHeight="31.0" prefWidth="181.0" text="Ввод данных пользователя" />
+        <Label fx:id="nameLabel" layoutX="137.0" layoutY="188.0" prefHeight="31.0" prefWidth="88.0" text="Name" wrapText="true" />
+        <TextField fx:id="nameTextField" layoutX="227.0" layoutY="191.0" />
+        <Label fx:id="loginLabel" layoutX="137.0" layoutY="100.0" prefHeight="31.0" prefWidth="88.0" text="Login" />
+        <TextField fx:id="loginTextField" layoutX="225.0" layoutY="103.0" />
+        <Label fx:id="passwordLabel" layoutX="137.0" layoutY="144.0" prefHeight="31.0" prefWidth="88.0" text="Password" />
+        <TextField fx:id="passwordTextField" layoutX="227.0" layoutY="147.0" />
+        <Button layoutX="137.0" layoutY="267.0" mnemonicParsing="false" onAction="#addUser" prefHeight="31.0" prefWidth="329.0" text="Зарегистрироваться затем перейти в главное окно"></Button>
+    </children>
+
+
+</AnchorPane>

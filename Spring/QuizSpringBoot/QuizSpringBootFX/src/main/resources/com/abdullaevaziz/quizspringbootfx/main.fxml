@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.quizspringbootfx.controllers.MainController">
+    <children>
+        <Label fx:id="textLabel" layoutX="67.0" layoutY="55.0" prefHeight="37.0" prefWidth="131.0" />
+        <ListView fx:id="quizListView" layoutX="26.0" layoutY="117.0" prefHeight="200.0" prefWidth="599.0" />
+        <Button layoutX="443.0" layoutY="330.0" mnemonicParsing="false" onAction="#exit" prefHeight="38.0" prefWidth="87.0" text="Exit" />
+        <Button fx:id="backToUsersButton" layoutX="312.0" layoutY="54.0" mnemonicParsing="false" onAction="#backToUsersButton" prefHeight="38.0" prefWidth="131.0" text="back to users" />
+        <Label fx:id="label" layoutX="67.0" layoutY="92.0" prefHeight="19.0" prefWidth="131.0" text="Client" />
+      <Button fx:id="buttonNewQuiz" layoutX="142.0" layoutY="330.0" mnemonicParsing="false" onAction="#buttonNewQuiz" prefHeight="38.0" prefWidth="155.0" text="Пройти новую викторину" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+### add TV
+POST localhost:8081/tv
+content-type:application/json
+
+{
+  "brand" : "Samsung",
+  "model" : "K900",
+  "color" : "Black",
+  "timeExpectancy" : 10,
+  "price" : 2000
+}
+
+### add TV
+POST localhost:8081/tv
+content-type:application/json
+
+{
+  "brand" : "Panasonic",
+  "model" : "T3789",
+  "color" : "Black",
+  "timeExpectancy" : 10,
+  "price" : 2000
+}
+
+### add TV
+POST localhost:8081/tv
+content-type:application/json
+
+{
+  "brand" : "LG",
+  "model" : "L20",
+  "color" : "Black",
+  "timeExpectancy" : 10,
+  "price" : 2000
+}
+
+### get all TV
+GET localhost:8081/tv
+
+### get TV by id
+GET localhost:8081/tv/1
+
+### get TV by incorrect id
+GET localhost:8081/tv/100
+
+### get all TV by brand
+GET localhost:8081/tv/search?brand=Samsung
+
+### remove TV by id
+DELETE localhost:8081/tv/3
+
+### update TV
+PUT localhost:8081/tv/
+content-type:application/json
+
+{
+  "id" : 2,
+  "brand" : "Telefunken",
+  "model" : "U90",
+  "color" : "Whte",
+  "timeExpectancy" : 20,
+  "price" : 20000
+}
+
+### update TV
+PUT localhost:8081/tv/
+content-type:application/json
+
+{
+  "id" : 1,
+  "brand" : "Telefunken",
+  "model" : "U90",
+  "color" : "Whte",
+  "timeExpectancy" : 20,
+  "price" : 20000
+}
+
+### update TV
+PUT localhost:8081/tv/
+content-type:application/json
+
+{
+  "id" : 100,
+  "brand" : "TT",
+  "model" : "U90",
+  "color" : "Whte",
+  "timeExpectancy" : 20,
+  "price" : 20000
+}

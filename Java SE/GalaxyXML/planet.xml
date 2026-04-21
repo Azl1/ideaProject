@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Planet>
+    <namePlanet>Марс</namePlanet>
+    <radius>1500</radius>
+    <period>7000</period>
+</Planet>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.abdullaevaziz.fileuploaderspringbootfx.controllers.MainController">
+    <children>
+        <Label fx:id="getAbsolutePathLabelClient" layoutX="67.0" layoutY="55.0" prefHeight="37.0" prefWidth="131.0"/>
+        <Label fx:id="getPathLabelServer" layoutX="478.0" layoutY="55.0" prefHeight="37.0" prefWidth="131.0"/>
+        <ListView fx:id="getAbsolutePathListViewClient" layoutX="26.0" layoutY="117.0" prefHeight="200.0"
+                  prefWidth="315.0"/>
+        <ListView fx:id="getPathListViewServer" layoutX="411.0" layoutY="117.0" prefHeight="200.0" prefWidth="315.0"/>
+        <Button layoutX="107.0" layoutY="339.0" mnemonicParsing="false" onAction="#addFolderButtonClient"
+                prefHeight="38.0" prefWidth="131.0" text="add folder"/>
+        <Button fx:id="buttonExit" layoutX="334.0" layoutY="339.0" mnemonicParsing="false" onAction="#exit"
+                prefHeight="38.0" prefWidth="87.0" text="Exit" visible="false"/>
+        <Button layoutX="513.0" layoutY="339.0" mnemonicParsing="false" onAction="#addFolderButtonServer"
+                prefHeight="38.0" prefWidth="131.0" text="add folder"/>
+        <Button fx:id="buttonChoseUser" layoutX="312.0" layoutY="54.0" mnemonicParsing="false"
+                onAction="#backToUsersButton" prefHeight="38.0" prefWidth="131.0" text="back to users"/>
+        <Label fx:id="getAbsolutePathLabel1" layoutX="67.0" layoutY="92.0" prefHeight="19.0" prefWidth="131.0"
+               text="Client"/>
+        <Label fx:id="getAbsolutePathLabel11" layoutX="478.0" layoutY="92.0" prefHeight="19.0" prefWidth="131.0"
+               text="Server"/>
+
+        <Button text="&lt;-"
+                layoutX="355.0"
+                layoutY="160.0"
+                prefHeight="40.0"
+                prefWidth="40.0"
+                onAction="#moveToClient"/>
+
+        <Button text="-&gt;"
+                layoutX="355.0"
+                layoutY="210.0"
+                prefHeight="40.0"
+                prefWidth="40.0"
+                onAction="#moveToServer"/>
+
+
+    </children>
+</AnchorPane>

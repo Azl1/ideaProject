@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.telegrambotspringbootfx.controllers.TelegramUserController">
+   <children>
+      <TextArea fx:id="textArea" layoutX="20.0" layoutY="31.0" prefHeight="167.0" prefWidth="514.0" />
+      <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#sendButton" prefHeight="64.0" prefWidth="107.0" text="Отправить" />
+      <Button layoutX="159.0" layoutY="229.0" mnemonicParsing="false" onAction="#imageButton" prefHeight="64.0" prefWidth="107.0" text="Картина" />
+      <Button layoutX="296.0" layoutY="226.0" mnemonicParsing="false" onAction="#audioButton" prefHeight="64.0" prefWidth="107.0" text="Музыка" />
+      <Button layoutX="422.0" layoutY="229.0" mnemonicParsing="false" onAction="#documentButton" prefHeight="64.0" prefWidth="107.0" text="Документ" />
+   </children>
+</AnchorPane>
