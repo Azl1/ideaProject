@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.abdullaevaziz.brothelfx.controllers.clientcontrollers.UpdateClient"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label layoutX="205.0" layoutY="8.0" prefHeight="31.0" prefWidth="181.0" text="Ввод данных клиента" />
+        <Label fx:id="fioLabel" layoutX="14.0" layoutY="65.0" prefHeight="31.0" prefWidth="149.0" text="ФИО клиента" />
+        <TextField fx:id="fioTextField" layoutX="14.0" layoutY="103.0" />
+        <Label fx:id="AgeLabel" layoutX="352.0" layoutY="65.0" prefHeight="31.0" prefWidth="149.0" text="Возраст клиента" />
+        <TextField fx:id="ageTextField" layoutX="352.0" layoutY="103.0" />
+        <Label fx:id="numberLabel" layoutX="14.0" layoutY="157.0" prefHeight="31.0" prefWidth="149.0" text="Номер телефона клиента" />
+        <TextField fx:id="numberTextField" layoutX="14.0" layoutY="194.0" />
+        <Label fx:id="preferencesLabel" layoutX="352.0" layoutY="157.0" prefHeight="31.0" prefWidth="149.0" text="Предпочтения клиента" />
+        <TextField fx:id="preferencesTextField" layoutX="352.0" layoutY="194.0" />
+        <Button layoutX="14.0" layoutY="271.0" mnemonicParsing="false" onAction="#addClient" prefHeight="31.0" prefWidth="204.0" text="Добавить и закрыть окно" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card-List</title>
+    <script src="scripts/jQuery.min.js"></script>
+    <script src="scripts/jquery.cookie.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/paging.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+
+    <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+
+
+
+</head>
+<body>
+
+<!--
+<table id="table-users" class="table table-dark">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Login</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+-->
+
+
+<p id="tableCategories">Categories</p>
+
+<!-- ListCategories-->
+<table id="listCategories" class="table table-bordered table-hover horizontal-align">
+    <thead class="table-dark">
+    <th>ID</th>
+    <th>Name category</th>
+    <th>Редактировать</th>
+    <th>Удалить</th>
+    <th>Показать карточки</th>
+
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+<div class="pull-right">
+    <button type="button" class="btn btn-primary" id="btn_sign_out">Sign Out</button>
+</div>
+
+
+
+<!-- Button trigger modal add-->
+<div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddCategories">
+        Add new categories
+    </button>
+    <!--<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalSearrchCategories">
+        Search categories
+    </button>-->
+    <!-- <button type="button" class="btn btn-info btn-sm" id="show_1" onclick="showCategories(1)">
+         <i class="fa fa-bath"></i>
+     </button>-->
+</div>
+
+<p id="tableCards">Cards</p>
+
+<!-- ListCards-->
+<table id="listCards" class="table table-bordered table-hover horizontal-align">
+    <thead class="table-dark">
+
+    <th>ID</th>
+    <th>Question</th>
+    <th>Answer</th>
+    <th>Редактировать</th>
+    <th>Удалить</th>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+</table>
+<!--<div id="listCategories" style="text-align: right "></div>-->
+
+
+<!-- Modal Add New Categories-->
+<div class="modal fade" id="modalAddCategories" tabindex="-1" aria-labelledby="addNewCategoriesModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addNewCategoriesModalLabel"> Add new categories</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!--<div class="mb-3">
+                        <input type="text" class="form-control" id="add_categories_id" aria-describedby="ID">
+                        <label for="add_categories_id" class="form-label">Add id category</label>
+                    </div>-->
+                    <div class="mb-3">
+                        <label for="add_categories_name" class="form-label">Name category</label>
+                        <input type="text" class="form-control" id="add_categories_name" aria-describedby="Name">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="add_categories_button">Send</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Change Categories-->
+<div class="modal fade" id="modalChangeCategories" tabindex="-1" aria-labelledby="changeCategoriesModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changeCategoriesModalLabel">Change categories</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="number" id="change_categories_id" hidden>
+                    <div class="mb-3">
+                        <label for="change_categories_name" class="form-label">Name categories</label>
+                        <input type="text" class="form-control" id="change_categories_name"
+                               aria-describedby="Name categories">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="change_categories_button">Send</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Show Categories-->
+<!--<div class="modal fade" id="show_id_category" tabindex="-1" aria-labelledby="addNewCategoriesModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="showCategoriesModalLabel"> Show id categories</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    &lt;!&ndash;<div class="mb-3">
+                        <label for="add_categories_name" class="form-label">Name category</label>
+                        <input type="text" class="form-control" id="add_categories_name" aria-describedby="Name">
+                    </div>&ndash;&gt;
+                </form>
+            </div>
+            <div class="model-footer">
+                <button type="button" class="btn btn-primary" id="show_categories_button">Send</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<!-- Search Categories-->
+<!--<div class="modal fade" id="modalSearchCategories" tabindex="-1" aria-labelledby="searchCategoriesModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchCategoriesModalLabel">Search Categories</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="search_categories_name" class="form-label">Name categories</label>
+                        <input type="text" class="form-control" id="search_categories_name" aria-describedby="Name">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="search_categories_button">Search</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<!-- Modal Add New Cards-->
+<div class="modal fade" id="modalAddCards" tabindex="-1" aria-labelledby="addNewCardsModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addNewCardsModalLabel"> Add new cards</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="add_cards_question" class="form-label">Name cards question</label>
+                        <input type="text" class="form-control" id="add_cards_question" aria-describedby="Question">
+                    </div>
+                    <div class="mb-3">
+                        <label for="add_cards_answer" class="form-label">Add cards answer</label>
+                        <input type="text" class="form-control" id="add_cards_answer" aria-describedby="Answer">
+                    </div>
+                    <div class="model-footer">
+                        <button type="button" class="btn btn-primary" id="add_cards_button">Send</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddCards">
+        Add new cards
+    </button>
+</div>
+
+<!-- Modal Change Cards-->
+<div class="modal fade" id="modalChangeCards" tabindex="-1" aria-labelledby="changeCardsModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changeCardsModalLabel">Change cards</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="number" id="change_cards_id" hidden>
+                    <div class="mb-3">
+                        <label for="change_cards_question" class="form-label">Question</label>
+                        <input type="text" class="form-control" id="change_cards_question"
+                               aria-describedby="Question cards">
+                    </div>
+                    <div class="mb-3">
+                        <label for="change_cards_answer" class="form-label">Answer</label>
+                        <input type="text" class="form-control" id="change_cards_answer"
+                               aria-describedby="Answer cards">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="change_cards_button">Send</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="scripts/index.js"></script>
+<script type="text/javascript">
+    showCategories()
+</script>
+
+</body>
+</html>
+

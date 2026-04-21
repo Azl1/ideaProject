@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "50614db5-29db-43bb-bee5-b9f8ce61b9ea",
+		"name": "FileUploadingServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload new File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "note",
+							"value": "Hello World",
+							"type": "default"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/tirsb/IdeaProjects/JavaEE/FileUploadingLect/FileUploadingClient/photo.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/FileUploadingServer/file_upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FileUploadingServer",
+						"file_upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get file from server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/FileUploadingServer/file_upload?filename=photo.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FileUploadingServer",
+						"file_upload"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "photo.png"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

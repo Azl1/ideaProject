@@ -1,0 +1,4 @@
+Name;Family;Courses
+Иван;Иванов;1;null
+Петр;Петров;3;null
+Сидор;Сидоров;2;null

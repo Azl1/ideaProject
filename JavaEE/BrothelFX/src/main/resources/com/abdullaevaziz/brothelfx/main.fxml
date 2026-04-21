@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.brothelfx.controllers.MainController">
+    <children>
+        <ListView fx:id="listViewClients" layoutY="45.0" prefHeight="246.0" prefWidth="601.0"/>
+        <Button layoutY="302.0" mnemonicParsing="false" onAction="#addButtonCl" prefHeight="42.0" prefWidth="346.0"
+                text="Добавить клиента"/>
+        <Button layoutX="350.0" layoutY="302.0" mnemonicParsing="false" onAction="#updateButtonCl" prefHeight="91.0"
+                prefWidth="126.0" text="Изменить клиента"/>
+        <Button layoutX="476.0" layoutY="302.0" mnemonicParsing="false" onAction="#removeButtonCl" prefHeight="91.0"
+                prefWidth="118.0" text="Удалить  клиента"/>
+        <Label fx:id="labelClients" layoutX="29.0" layoutY="14.0" prefHeight="25.0" prefWidth="216.0"
+               text="Список клиентов"/>
+        <Button layoutY="348.0" mnemonicParsing="false" onAction="#buttonShowProstitute" prefHeight="42.0"
+                prefWidth="346.0" text="Открыть выбранного клиента у которого есть проститутки"/>
+    </children>
+</AnchorPane>

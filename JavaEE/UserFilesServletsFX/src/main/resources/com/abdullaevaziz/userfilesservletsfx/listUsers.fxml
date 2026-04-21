@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.userfilesservletsfx.controllers.ListUserFiles">
+
+    <children>
+        <ListView fx:id="listViewUserFile" layoutY="45.0" prefHeight="246.0" prefWidth="601.0" />
+        <Button layoutX="11.0" layoutY="302.0" mnemonicParsing="false" onAction="#saveFileButton" prefHeight="91.0" prefWidth="216.0" text="Сохранить файл" />
+        <Button layoutX="378.0" layoutY="302.0" mnemonicParsing="false" onAction="#sendFileButton" prefHeight="91.0" prefWidth="216.0" text="Отправить файл на сервер" />
+        <Label fx:id="labelUsers" layoutX="29.0" layoutY="14.0" prefHeight="25.0" prefWidth="216.0" text="Список файлов" />
+    </children>
+
+</AnchorPane>

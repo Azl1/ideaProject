@@ -1,0 +1,158 @@
+### добавления клиента
+POST http://localhost:8083/Brothel/clients
+content-type: application/json
+
+{
+
+  "fio": "Иванов Иван Иванович",
+  "numberTel": 1234567,
+  "age": 18,
+  "preferences": "Предпочитает тройничок"
+}
+
+### добавления клиента
+POST http://localhost:8083/Brothel/clients
+content-type: application/json
+
+{
+  "fio": "Жуковский Жук Жукович",
+  "numberTel": 841512,
+  "age": 22,
+  "preferences": "Предпочитает лесби"
+}
+
+### добавления клиента
+POST http://localhost:8083/Brothel/clients
+content-type: application/json
+
+{
+  "fio": "Александров Александр Александрович",
+  "numberTel": 154152,
+  "age": 21,
+  "preferences": "Предпочитает БДСМ"
+}
+
+### добавления клиента
+POST http://localhost:8083/Brothel/clients
+content-type: application/json
+
+{
+  "fio": "Сидоров Сидор Сидорович",
+  "numberTel": 7654321,
+  "age": 19,
+  "preferences": "Предпочитает дрочить"
+}
+
+### добавления клиента
+POST http://localhost:8083/Brothel/clients
+content-type: application/json
+
+{
+  "fio": "Петров Петр Петрович",
+  "numberTel": 4515845,
+  "age": 20,
+  "preferences": "Предпочитает заниматься сексом с носками"
+}
+### получения клиента
+GET http://localhost:8083/Brothel/clients?id=1
+### удаление клиента
+DELETE http://localhost:8083/Brothel/clients?id=1
+
+### Обновление клиента
+PUT http://localhost:8083/Brothel"/clients"
+content-type: application/json
+
+{
+  "id": 2,
+  "fio": "Букин Валера Петрович",
+  "numberTel": 48541,
+  "age": 28,
+  "preferences": "Предпочитает геев"
+}
+
+
+
+### добавления проститутки
+POST http://localhost:8083/Brothel/prostitutes
+content-type: application/json
+
+{
+  "fio": "Воронова",
+  "age": 20,
+  "weight": 50,
+  "specialization": "Предпочитает брать в рот",
+  "pricePerHour": 1.5,
+  "id_cl": 1
+}
+
+### добавления проститутки
+POST http://localhost:8083/Brothel/prostitutes
+content-type: application/json
+
+{
+  "fio": "Акимова",
+  "age": 19,
+  "weight": 52,
+  "specialization": "дает в жопу",
+  "pricePerHour": 1.2,
+  "id_cl": 2
+}
+
+### добавления проститутки
+POST http://localhost:8083/Brothel/prostitutes
+content-type: application/json
+
+{
+  "fio": "Дьякова",
+  "age": 20,
+  "weight": 18,
+  "specialization": "целует ноги и половой орган",
+  "pricePerHour": 1.1,
+  "id_cl": 3
+}
+
+### добавления проститутки
+POST http://localhost:8083/Brothel/prostitutes
+content-type: application/json
+
+{
+  "fio": "Ежова",
+  "age": 22,
+  "weight": 58,
+  "specialization": "дает сразу и везде",
+  "pricePerHour": 2.0,
+  "id_cl": 4
+}
+
+### добавления проститутки
+POST http://localhost:8083/Brothel/prostitutes
+content-type: application/json
+
+{
+  "fio": "Гурова",
+  "age": 25,
+  "weight": 52,
+  "specialization": "любит наказывать подкаблучников",
+  "pricePerHour": 3.5,
+  "id_cl": 5
+}
+
+### получения проститутки
+GET http://localhost:8083/Brothel/prostitutes?id=1
+### получения проститутки
+GET http://localhost:8083/Brothel/prostitutes?clientId=3
+### удаление проститутки
+DELETE http://localhost:8083/Brothel/prostitutes?id=1
+### Обновление клиента
+PUT http://localhost:8083/Brothel/prostitutes
+content-type: application/json
+
+{
+  "id": 4,
+  "fio": "Валерова",
+  "age": 40,
+  "weight": 62,
+  "specialization": "любит негров",
+  "pricePerHour": 2.5,
+  "id_cl": 3
+}

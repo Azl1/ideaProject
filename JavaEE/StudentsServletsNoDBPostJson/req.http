@@ -1,0 +1,77 @@
+###
+POST localhost:8084/StudentsServletsNoDBPostJson/student
+content-type:application/json
+
+{
+  "id": 47,
+  "fio": "Чуев Роман Казбекович",
+  "age": 22,
+  "num": 40,
+  "salary": 55000.0
+}
+
+###
+POST localhost:8084/StudentsServletsNoDBPostJson/student?fio=Руденко Павел Иванович&age=20&num=30&salary=58000.00
+
+###
+POST localhost:8084/StudentsServletsNoDBPostJson/student?fio=Чуев Роман Казбекович&age=22&num=40&salary=55000.00
+
+###
+GET localhost:8084/StudentsServletsNoDBPostJson/student
+
+###
+GET localhost:8084/StudentsServletsNoDBPostJson/student?id=1
+
+###
+DELETE localhost:8084/StudentsServletsNoDBPostJson/student?id=2
+
+###
+PUT localhost:8084/StudentsServletsNoDBPostJson/student
+content-type:application/json
+
+{
+  "id": 50,
+  "fio": "Хуев Роман Казбекович",
+  "age": 23,
+  "num": 50,
+  "salary": 75000.0
+}
+
+###
+POST localhost:8084/StudentsServletsNoDBPostJson/auto
+content-type:application/json
+
+{
+  "id": 18,
+  "brand": "Киа",
+  "power": 2020.0,
+  "year": 2021,
+  "idStudent": 3
+}
+
+###
+POST localhost:8084/StudentsServletsNoDBPostJson/auto?brand=БМВ&power=2000&year=2022&idStudent=2
+
+###
+POST localhost:8084/StudentsServletsNoDBPostJson/auto?brand=Киа&power=2020&year=2021&idStudent=3
+
+###
+GET localhost:8084/StudentsServletsNoDBPostJson/auto
+
+###
+GET localhost:8084/StudentsServletsNoDBPostJson/auto?id=2
+
+###
+DELETE localhost:8084/StudentsServletsNoDBPostJson/auto?id=3
+
+###
+PUT localhost:8084/StudentsServletsNoDBPostJson/auto
+content-type:application/json
+
+{
+  "id": 14,
+  "brand": "БМВнчик",
+  "power": 2000.0,
+  "year": 2022,
+  "idStudent": 14
+}

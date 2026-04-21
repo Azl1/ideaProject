@@ -1,0 +1,44 @@
+###
+POST localhost:8083/StudentsServletsNoDB/student?fio=Арбузов Андрей Александрович&age=18&num=20&salary=50000.00
+
+###
+POST localhost:8083/StudentsServletsNoDB/student?fio=Руденко Павел Иванович&age=20&num=30&salary=58000.00
+
+###
+POST localhost:8083/StudentsServletsNoDB/student?fio=Чуев Роман Казбекович&age=22&num=40&salary=55000.00
+
+###
+GET localhost:8083/StudentsServletsNoDB/student
+
+###
+GET localhost:8083/StudentsServletsNoDB/student?id=1
+
+###
+DELETE localhost:8083/StudentsServletsNoDB/student?id=2
+
+###
+PUT localhost:8083/StudentsServletsNoDB/student?fio=Хуев Роман Казбекович&age=22&num=40&salary=55000
+
+
+
+
+###
+POST localhost:8083/StudentsServletsNoDB/auto?brand=Мерседес&power=2005&year=2021&idStudent=1
+
+###
+POST localhost:8083/StudentsServletsNoDB/auto?brand=БМВ&power=2000&year=2022&idStudent=2
+
+###
+POST localhost:8083/StudentsServletsNoDB/auto?brand=Киа&power=2020&year=2021&idStudent=3
+
+###
+GET localhost:8083/StudentsServletsNoDB/auto
+
+###
+GET localhost:8083/StudentsServletsNoDB/auto?id=2
+
+###
+DELETE localhost:8083/StudentsServletsNoDB/auto?id=3
+
+###
+PUT localhost:8083/StudentsServletsNoDB/auto?id=6&brand=Хундай&power=2020&year=2021&idStudent=8

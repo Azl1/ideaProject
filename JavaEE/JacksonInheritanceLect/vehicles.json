@@ -1,0 +1,15 @@
+[
+  {
+    "type": "car",
+    "brand": "Mercedes-Benz",
+    "model": "S500",
+    "seatingCapacity": 5,
+    "topSpeed": 250.0
+  },
+  {
+    "type": "truck",
+    "brand": "Isuzu",
+    "model": "NQR",
+    "payloadCapacity": 7500.0
+  }
+]

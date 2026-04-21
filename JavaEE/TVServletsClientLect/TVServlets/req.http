@@ -1,0 +1,14 @@
+###
+POST http://localhost:8082/TVServlets/tv?brand=Зорька&model=mod1&color=orange&timeExpectancy=15&price=12345
+
+###
+PUT http://localhost:8082/TVServlets/tv?id=1&price=6677889
+
+###
+DELETE http://localhost:8082/TVServlets/tv?id=4
+
+###
+GET  http://localhost:8082/TVServlets/tv?id=2
+
+###
+GET  http://localhost:8082/TVServlets/tv

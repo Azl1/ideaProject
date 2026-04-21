@@ -1,0 +1,23 @@
+###
+POST localhost:8083/FrontServletsLect/part?count=10&need=true&name=Z1
+
+###
+PUT localhost:8083/FrontServletsLect/part
+content-type:application/json
+
+{
+  "id": 10,
+  "name": "8",
+  "need": false,
+  "count": 8
+}
+
+###
+GET localhost:8083/FrontServletsLect/part
+
+###
+GET localhost:8083/FrontServletsLect/part?id=1
+
+###
+GET localhost:8083/FrontServletsLect/part?name=f&need=true&count=1
+

@@ -1,0 +1,390 @@
+### User
+
+### добавления usera
+POST http://localhost:8084/Card/users
+content-type: application/json
+
+{
+  "login": "kuznetsov2009",
+  "password": "1234",
+  "name": "Иван"
+}
+
+### добавления usera
+POST http://localhost:8084/Card/users
+content-type: application/json
+
+{
+  "login": "al.kuznetsoff",
+  "password": "4321",
+  "name": "Александр"
+}
+
+### добавления usera
+POST http://localhost:8084/Card/users
+content-type: application/json
+
+{
+  "login": "mr.cuznetsoff",
+  "password": "3211",
+  "name": "Петр"
+}
+
+### добавления usera
+POST http://localhost:8084/Card/users
+content-type: application/json
+
+{
+  "login": "sasha.kuznetsov",
+  "password": "3321",
+  "name": "Кузя"
+}
+
+### добавления usera
+POST http://localhost:8084/Card/users
+content-type: application/json
+
+{
+  "login": "shura.kuznetsov",
+  "password": "2131",
+  "name": "Рома"
+}
+
+### добавления usera
+POST http://localhost:8084/Card/users
+content-type: application/json
+
+{
+  "login": "ivanov392487356",
+  "password": "5421",
+  "name": "Алексей"
+}
+
+### добавления usera для проверки ошибки
+POST http://localhost:8084/Card/users
+content-type: application/json
+
+{
+  "login": "ivanov392487356",
+  "password": "5421",
+  "name": "Алексей"
+}
+
+### добавления usera
+POST http://localhost:8084/Card/users
+content-type: application/json
+
+{
+  "login": "Bivanov79248",
+  "password": "55555",
+  "name": "Валерий"
+}
+
+### обновления usera для проверки ошибки такого usera нет с таким айди
+PUT http://localhost:8084/Card/users?id=100
+content-type: application/json
+
+{
+  "login": "ivanov392487356",
+  "password": "5421",
+  "name": "Алексей"
+}
+
+### обновления повторного usera для проверки ошибки
+PUT http://localhost:8084/Card/users?id=6
+content-type: application/json
+
+{
+  "id" : 2,
+  "login": "ivanov392487356",
+  "password": "5421",
+  "name": "Алексей"
+}
+
+### обновления usera
+PUT http://localhost:8084/Card/users
+content-type: application/json
+
+{
+  "id" : 1,
+  "login": "Bivanov79248",
+  "password": "55555",
+  "name": "Валерий"
+}
+
+
+
+
+### получение usera
+GET http://localhost:8084/Card/users?id=3
+### получение usera которого нет в базе
+GET http://localhost:8084/Card/users?id=100
+### получение usera для проверки ошибки
+GET http://localhost:8084/Card/users?id=2Ь
+
+### получение login и паролья
+GET http://localhost:8084/Card/users?login=al.kuznetsoff&password=4321
+### получение login и паролья
+GET http://localhost:8084/Card/users?login=mr.cuznetsoff&password=3211
+### получение usera для проверки ошибки
+GET http://localhost:8084/Card/users?login=mr.cuznetsoff&password=321524ор
+
+### удаления usera
+DELETE http://localhost:8084/Card/users?id=5
+### удаления usera которого нет в базе
+DELETE http://localhost:8084/Card/users?id=100
+### удаления usera не корректный id
+DELETE http://localhost:8084/Card/users?id=5B
+
+
+### Category
+
+### добавления category
+POST http://localhost:8084/Card/categories?userId=1
+content-type: application/json
+
+{
+  "name": "Категория Аgvsd"
+}
+
+### добавления category
+POST http://localhost:8084/Card/categories?userId=1
+content-type: application/json
+
+{
+  "name": "Категория R"
+}
+
+### добавления category
+POST http://localhost:8084/Card/categories?userId=2
+content-type: application/json
+
+{
+  "name": "Категория B"
+}
+
+### добавления category
+POST http://localhost:8084/Card/categories?userId=3
+content-type: application/json
+
+{
+  "name": "Категория C"
+}
+
+### добавления category
+POST http://localhost:8084/Card/categories?userId=4
+content-type: application/json
+
+{
+  "name": "Категория D"
+}
+
+### добавления category
+POST http://localhost:8084/Card/categories?userId=4
+content-type: application/json
+
+{
+  "name": "Категория Q"
+}
+
+### добавления category
+POST http://localhost:8084/Card/categories?userId=4
+content-type: application/json
+
+{
+  "name": "Категория AAZ"
+}
+
+### добавления повторного category для проверки ошибки
+POST http://localhost:8084/Card/categories?userId=4
+content-type: application/json
+
+{
+  "name": "Категория AAZ"
+}
+
+### добавления category не найденного usera
+POST http://localhost:8084/Card/categories?userId=100
+content-type: application/json
+
+{
+  "name": "Категория проверка ошибки"
+}
+
+### добавления category некорректного формата
+POST http://localhost:8084/Card/categories?userId=1b
+content-type: application/json
+
+{
+  "name": "Категория проверка ошибки"
+}
+
+### получение категорий по id usera
+GET http://localhost:8084/Card/categories?userId=4
+
+### получение категорий по id категорий
+GET http://localhost:8084/Card/categories?id=4
+
+### получение категорий
+GET http://localhost:8084/Card/categories?id=4Б
+
+### получение категорий некорректного формата по id
+GET http://localhost:8084/Card/categories?userId
+
+### получение категорий по id не найденного usera
+GET http://localhost:8084/Card/categories?userId=100
+
+### Обновления category для проверки нет с таким айди
+PUT http://localhost:8084/Card/categories?id=1
+content-type: application/json
+
+{
+  "name": "Категория O"
+}
+
+
+### Обновления category category нет с таким айди
+PUT http://localhost:8084/Card/categories
+content-type: application/json
+
+{
+  "id": 100,
+  "name": "Категория M"
+}
+
+### Обновления category
+PUT http://localhost:8084/Card/categories
+content-type: application/json
+
+{
+  "id": 1,
+  "name": "Категория M"
+}
+
+
+
+
+### удаления userId в category
+DELETE http://localhost:8084/Card/categories?userId=1
+### удаления category
+DELETE http://localhost:8084/Card/categories?id=27
+### удаления user category с таким id несуществует
+DELETE http://localhost:8084/Card/categories?userId=100
+### удаления category некорректный формат id
+DELETE http://localhost:8084/Card/categories?userId=1Б
+
+
+
+### Card
+
+### добавления card
+POST http://localhost:8084/Card/cards?categoryId=1
+content-type: application/json
+
+{
+  "question": "В каком случае водитель совершит вынужденную остановку?",
+  "answer": "Остановившись на проезжей части из-за технической неисправности транспортного средства"
+
+}
+
+### добавления card
+POST http://localhost:8084/Card/cards?categoryId=2
+content-type: application/json
+
+{
+"question": "Сколько полос для движения имеет данная дорога?",
+"answer": "Две"
+
+}
+
+### добавления card
+POST http://localhost:8084/Card/cards?categoryId=3
+content-type: application/json
+
+{
+  "question": "Выезжая с грунтовой дороги на перекресток, Вы попадаете: ?",
+  "answer": "На главную дорогу"
+
+}
+
+### добавления card
+POST http://localhost:8084/Card/cards?categoryId=4
+content-type: application/json
+
+{
+  "question": "Сколько полос для движения имеет проезжая часть данной дороги?",
+  "answer": "Одну полосу"
+
+}
+
+### добавления card
+POST http://localhost:8084/Card/cards?categoryId=4
+content-type: application/json
+
+{
+  "question": "Сколько полос для движения имеет проезжая часть данной дороги?",
+  "answer": "Возможно две полосы"
+
+}
+
+### добавления card
+POST http://localhost:8084/Card/cards?categoryId=5
+content-type: application/json
+
+{
+  "question": "Главная дорога показана:",
+  "answer": "На левом верхнем и нижнем рисунках"
+}
+
+### обновления card ошибка с такого card нет с таким айди
+PUT http://localhost:8084/Card/cards
+content-type: application/json
+
+{
+  "question": "Не главная дорога видна:",
+  "answer": "Вариант А"
+}
+
+### обновления card
+PUT http://localhost:8084/Card/cards
+content-type: application/json
+
+{
+  "id": 2,
+  "question": "Не главная дорога видна:",
+  "answer": "Вариант А"
+}
+
+
+### получение card по categoryId
+GET http://localhost:8084/Card/cards?categoryId=5
+
+### получение список card по usera
+GET http://localhost:8084/Card/cards?userId=4
+
+### получение список card по id
+GET http://localhost:8084/Card/cards?id=4
+
+
+
+
+### получение card ошибки Некорректный формат id по categoryId
+GET http://localhost:8084/Card/cards?categoryId=100б
+### получение card ошибки Некорректный формат id не найденного по userId
+GET http://localhost:8084/Card/cards?userId=100б
+### получение card ошибки Некорректный формат id не найденного по userId
+GET http://localhost:8084/Card/cards?userId=100Б
+### получение card ошибки , если category не найдена
+GET http://localhost:8084/Card/cards?categoryId=100
+### получение card ошибки , если user не найдена
+GET http://localhost:8084/Card/cards?userId=100
+### получение card ошибки , если card не найдена
+GET http://localhost:8084/Card/cards?id=100
+
+
+### удаления card
+DELETE http://localhost:8084/Card/cards?id=3
+### удаления card с таким id не существуеещем
+DELETE http://localhost:8084/Card/cards?id=100
+### удаления card некорректный формат id
+DELETE http://localhost:8084/Card/cards?id=3Б

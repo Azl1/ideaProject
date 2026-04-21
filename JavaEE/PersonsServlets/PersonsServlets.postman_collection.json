@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "097ce8f5-bf18-4c05-84df-4d1975ecb521",
+		"name": "PersonsServlets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38191810"
+	},
+	"item": [
+		{
+			"name": "PostPerson",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "PutPerson",
+			"request": {
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetPerson",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "DelPerson",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Петр\",\r\n  \"family\": \"Петров\",\r\n  \"age\": 21,\r\n  \"numberPhone\": 875721,\r\n  \"mail\": \"lobaka@yandex.ru\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8084/PersonsServlets/person",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"PersonsServlets",
+						"person"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

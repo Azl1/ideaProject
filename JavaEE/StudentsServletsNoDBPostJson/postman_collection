@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "5f42cc58-c66a-4ef0-919a-56aedda428e9",
+		"name": "StudentsServletsNoDBPostJson",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38191810"
+	},
+	"item": [
+		{
+			"name": "Post new Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 47,\r\n  \"fio\": \"Чуев Роман Казбекович\",\r\n  \"age\": 22,\r\n  \"num\": 40,\r\n  \"salary\": 55000.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8084/StudentsServletsNoDBPostJson/student",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"StudentsServletsNoDBPostJson",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put new Student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 50,\r\n  \"fio\": \"Хуев Роман Казбекович\",\r\n  \"age\": 23,\r\n  \"num\": 50,\r\n  \"salary\": 75000.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		}
+	]
+}

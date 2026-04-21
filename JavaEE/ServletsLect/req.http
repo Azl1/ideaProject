@@ -1,0 +1,10 @@
+GET localhost:8082/ServletsLect/demo
+
+###
+GET localhost:8082/ServletsLect/demo?name=Серега&age=20
+
+###
+POST localhost:8082/ServletsLect/demo?name=Серега
+
+###
+POST localhost:8082/ServletsLect/demo?name=Жека

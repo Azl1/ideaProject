@@ -1,0 +1,9 @@
+### post file to server
+POST http://localhost:8080/FileUploadingServer/file_upload HTTP/1.1
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="photo.png"
+
+// The 'input.txt' file will be uploaded
+< C:\Users\tirsb\IdeaProjects\JavaEE\FileUploadingLect\FileUploadingClient\photo.png

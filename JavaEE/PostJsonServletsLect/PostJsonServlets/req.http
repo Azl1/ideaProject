@@ -1,0 +1,26 @@
+POST localhost:8082/PostJsonServlets/tv
+content-type:application/json
+
+{
+  "brand" : "Самсунг",
+  "model" : "K900",
+  "color" : "Черный",
+  "timeExpectancy" : 10,
+  "price" : 20000
+}
+
+###
+PUT localhost:8082/PostJsonServlets/tv
+content-type:application/json
+
+{
+  "id" : 1,
+  "brand" : "Telefunken",
+  "model" : "K900",
+  "color" : "Черный",
+  "timeExpectancy" : 10,
+  "price" : 20000
+}
+
+###
+GET localhost:8080/PostJsonServlets/tv

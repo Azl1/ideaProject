@@ -1,0 +1,257 @@
+### Student
+
+### добавдения студента
+POST http://localhost:8082/StudentsDB/student
+content-type: application/json
+
+{
+
+  "fio": "Иванов Иван Иванович",
+  "age": 20,
+  "num": 7,
+  "salary": 5000
+}
+
+### добавдения студента
+POST http://localhost:8082/StudentsDB/student
+content-type: application/json
+
+{
+
+  "fio": "Петров Петр Петрович",
+  "age": 21,
+  "num": 8,
+  "salary": 5500
+}
+### добавдения студента
+POST http://localhost:8082/StudentsDB/student
+content-type: application/json
+
+{
+
+  "fio": "Сидоров Сидор Сидорович",
+  "age": 22,
+  "num": 10,
+  "salary": 5700
+}
+### добавдения студента
+POST http://localhost:8082/StudentsDB/student
+content-type: application/json
+
+{
+
+  "fio": "Валентинов Валентин Валентинович",
+  "age": 25,
+  "num": 15,
+  "salary": 7700
+}
+### добавдения студента
+POST http://localhost:8082/StudentsDB/student
+content-type: application/json
+
+{
+
+  "fio": "Юдашкин Павел Павлович",
+  "age": 28,
+  "num": 20,
+  "salary": 8700
+}
+
+### Не корректное добавление студента
+POST http://localhost:8082/StudentsDB/student
+content-type: application/json
+
+{
+  "fio": "Петров Леха Павлович",
+  "age": 28,
+  "num": 20,
+  "salary": 8700
+}
+
+
+### удаления студента
+DELETE http://localhost:8082/StudentsDB/student?id=1
+### удаления не корректного id студента
+DELETE http://localhost:8082/StudentsDB/student?id=ирап
+### удаления не правильного параметра id студента
+DELETE http://localhost:8082/StudentsDB/student?id=100
+### Не удалось удалить студента
+DELETE http://localhost:8082/StudentsDB/student?id=null
+
+
+### обновления студента
+PUT http://localhost:8082/StudentsDB/student
+content-type: application/json
+
+{
+  "id": 3,
+  "fio": "Березин Николай Валерьевич",
+  "age": 25,
+  "num": 50,
+  "salary": 10500
+}
+
+### Не уникален обновления студента
+PUT http://localhost:8082/StudentsDB/student
+content-type: application/json
+
+{
+  "id": 3,
+  "fio": "Березин Николай Валерьевич",
+  "age": 25,
+  "num": 20,
+  "salary": 10500
+}
+
+### получения студента
+GET http://localhost:8082/StudentsDB/student?id=1
+### получения не найденного студента
+GET http://localhost:8082/StudentsDB/student?id=200
+### получения некореектного формата id авто
+GET http://localhost:8082/StudentsDB/student?id=п
+### получения студентов
+GET http://localhost:8082/StudentsDB/student
+
+
+### Auto
+
+### добавления не найденного авто
+POST http://localhost:8082/StudentsDB/auto
+content-type: application/json
+
+{
+  "brand": "Лада",
+  "power": 150,
+  "year": 2021,
+  "id_s": 100
+}
+### добавления авто
+POST http://localhost:8082/StudentsDB/auto
+content-type: application/json
+
+{
+  "brand": "Матиз",
+  "power": 160,
+  "year": 2022,
+  "id_s": 1
+}
+### добавления авто
+POST http://localhost:8082/StudentsDB/auto
+content-type: application/json
+
+{
+  "brand": "Киа",
+  "power": 170,
+  "year": 2023,
+  "id_s": 2
+}
+
+### добавления авто
+POST http://localhost:8082/StudentsDB/auto
+content-type: application/json
+
+{
+  "brand": "Хундай",
+  "power": 180,
+  "year": 2017,
+  "id_s": 3
+}
+
+### добавления авто
+POST http://localhost:8082/StudentsDB/auto
+content-type: application/json
+
+{
+  "brand": "Таз",
+  "power": 500,
+  "year": 2010,
+  "id_s": 1
+}
+
+### добавления авто
+POST http://localhost:8082/StudentsDB/auto
+content-type: application/json
+
+{
+  "id": 5,
+  "brand": "Лексус",
+  "power": 520,
+  "year": 2021,
+  "id_s": 1
+}
+
+### добавления авто не найденного студента
+POST http://localhost:8082/StudentsDB/auto
+content-type: application/json
+
+{
+  "id": 8,
+  "brand": "Вольво",
+  "power": 420,
+  "year": 2022,
+  "id_s": 200
+}
+
+### Повторное добавление авто на проверку уникальности brand, power, year, id_s
+POST http://localhost:8082/StudentsDB/auto
+content-type: application/json
+
+{
+  "brand": "Хундай",
+  "power": 180,
+  "year": 2017,
+  "id_s": 3
+}
+
+
+### обновления авто о том , что автомобиль не уникален
+PUT http://localhost:8082/StudentsDB/auto
+content-type: application/json
+
+{
+  "id": 51,
+  "brand": "Мерс",
+  "power": 250,
+  "year": 2024,
+  "id_s": 3
+}
+
+### обновления авто не найденного студента
+PUT http://localhost:8082/StudentsDB/auto
+content-type: application/json
+
+{
+  "id": 4,
+  "brand": "Мерс",
+  "power": 250,
+  "year": 2024,
+  "id_s": 1000
+}
+
+### получения авто
+GET http://localhost:8082/StudentsDB/auto?id=5
+### получения не найденного авто
+GET http://localhost:8082/StudentsDB/auto?id=100
+### получения некореектного формата id авто
+GET http://localhost:8082/StudentsDB/auto?id=п
+### получения авто по айди студента
+GET http://localhost:8082/StudentsDB/auto
+
+### получения авто по айди студента
+GET http://localhost:8082/StudentsDB/auto?studentId=3
+### получения авто по айди студента не коректного данные
+GET http://localhost:8082/StudentsDB/auto?studentId=п
+
+
+
+### получения всех авто
+GET http://localhost:8082/StudentsDB/auto
+
+
+
+### удаления авто
+DELETE http://localhost:8082/StudentsDB/auto?id=3
+### удаление некорректного авто
+DELETE http://localhost:8082/StudentsDB/auto?id=hfg
+### удаление не правильного параметра id  авто
+DELETE http://localhost:8082/StudentsDB/auto

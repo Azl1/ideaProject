@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.controllers.MainController">
+   <children>
+      <Label layoutX="2.0" layoutY="3.0" prefHeight="39.0" prefWidth="446.0" text="Тема письма" />
+      <TextField fx:id="topicLetters" layoutX="2.0" layoutY="42.0" prefHeight="26.0" prefWidth="446.0" />
+      <Label layoutX="2.0" layoutY="68.0" prefHeight="26.0" prefWidth="446.0" text="Текст письма" />
+      <TextField fx:id="textLetters" layoutX="2.0" layoutY="103.0" prefHeight="68.0" prefWidth="445.0" />
+      <TextArea fx:id="listRecipients" layoutX="3.0" layoutY="184.0" prefHeight="102.0" prefWidth="594.0" />
+      <Button layoutX="462.0" layoutY="23.0" mnemonicParsing="false" onAction="#buttonSend" prefHeight="159.0" prefWidth="130.0" text="Button" />
+      <ListView fx:id="listSendLetters" layoutX="4.0" layoutY="288.0" prefHeight="112.0" prefWidth="594.0" />
+   </children>
+</AnchorPane>

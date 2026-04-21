@@ -1,0 +1,32 @@
+###
+POST localhost:8082/AjaxJSLect/user
+content-type:application/json
+
+{
+  "name": "Sergey",
+  "age": 35
+}
+
+###
+GET localhost:8082/AjaxJSLect/user?id=2
+
+###
+GET localhost:8082/AjaxJSLect/user?id=7
+
+###
+GET localhost:8082/AjaxJSLect/user?id=vc
+
+###
+GET localhost:8082/AjaxJSLect/user
+
+###
+PUT localhost:8082/AjaxJSLect/user
+content-type:application/json
+
+{
+  "id": 1,
+  "name": "Ivan",
+  "age": 25
+}
+###
+DELETE localhost:8082/AjaxJSLect/user?id=1

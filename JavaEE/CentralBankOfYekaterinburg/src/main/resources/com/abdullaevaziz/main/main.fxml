@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.controllers.MainController">
+   <children>
+      <Label layoutX="159.0" layoutY="14.0" prefHeight="39.0" prefWidth="138.0" text="Название документа" />
+      <TextField fx:id="tFieldNameDocument" layoutX="159.0" layoutY="53.0" prefHeight="55.0" prefWidth="138.0" />
+      <Label layoutX="304.0" layoutY="14.0" prefHeight="39.0" prefWidth="138.0" text="Продолжительность печати" />
+      <TextField fx:id="tFieldPrintDuration" layoutX="304.0" layoutY="53.0" prefHeight="55.0" prefWidth="138.0" />
+      <Label layoutX="453.0" layoutY="14.0" prefHeight="39.0" prefWidth="138.0" text="Размер документа" />
+      <TextField fx:id="tFieldSizeDocument" layoutX="453.0" layoutY="53.0" prefHeight="55.0" prefWidth="138.0" />
+      <Button layoutX="21.0" layoutY="116.0" mnemonicParsing="false" onAction="#addDocumentButton" prefHeight="39.0" prefWidth="126.0" text="Добавить документ" />
+      <Button layoutX="459.0" layoutY="116.0" mnemonicParsing="false" onAction="#closeButton" prefHeight="39.0" prefWidth="126.0" text="Стоп" />
+      <ListView fx:id="listViewDocument" layoutX="3.0" layoutY="238.0" prefHeight="163.0" prefWidth="594.0" />
+      <Button layoutX="159.0" layoutY="116.0" mnemonicParsing="false" onAction="#sortDocumentButton" prefHeight="39.0" prefWidth="126.0" text="Отсортировать список" />
+      <ComboBox fx:id="comboBoxSort" layoutX="298.0" layoutY="116.0" prefHeight="39.0" prefWidth="150.0" />
+      <Label layoutX="15.0" layoutY="14.0" prefHeight="39.0" prefWidth="138.0" text="Порядку печати" />
+      <TextField fx:id="tPrintingOrder" layoutX="15.0" layoutY="53.0" prefHeight="55.0" prefWidth="138.0" />
+      <Label layoutX="153.0" layoutY="155.0" prefHeight="39.0" prefWidth="208.0" text="Cредняя продолжительность печати" />
+      <TextField fx:id="tСalculateAverage" layoutX="153.0" layoutY="194.0" prefHeight="39.0" prefWidth="208.0" />
+      <Button layoutX="379.0" layoutY="160.0" mnemonicParsing="false" onAction="#calculateAverageButton" prefHeight="79.0" prefWidth="208.0" text="Расчет  среднюю  продолжительность печати" />
+   </children>
+</AnchorPane>

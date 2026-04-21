@@ -1,0 +1,116 @@
+### Coupon
+
+### добавления coupon
+POST http://localhost:8085/CouponManagerExecutor/coupon
+content-type: application/json
+
+{
+  "name": "Иванов",
+  "company": "Olg",
+  "expire": 10
+}
+
+### добавления coupon
+POST http://localhost:8085/CouponManagerExecutor/coupon
+content-type: application/json
+
+{
+  "name": "Петров",
+  "company": "Apple",
+  "expire": 1
+}
+
+### добавления coupon
+POST http://localhost:8085/CouponManagerExecutor/coupon
+content-type: application/json
+
+{
+  "name": "Сидоров",
+  "company": "Samsung",
+  "expire": 2
+}
+
+### добавления coupon
+POST http://localhost:8085/CouponManagerExecutor/coupon
+content-type: application/json
+
+{
+  "name": "Александров",
+  "company": "Volvo",
+  "expire": 3
+}
+
+### добавления coupon
+POST http://localhost:8085/CouponManagerExecutor/coupon
+content-type: application/json
+
+{
+  "name": "Романов",
+  "company": "Huawei",
+  "expire": 4
+}
+
+### добавления coupon
+POST http://localhost:8085/CouponManagerExecutor/coupon
+content-type: application/json
+
+{
+  "name": "Коновалов",
+  "company": "Моторола",
+  "expire": 1
+}
+
+### добавления coupon
+POST http://localhost:8085/CouponManagerExecutor/coupon
+content-type: application/json
+
+{
+  "name": "Березин",
+  "company": "Нокиа",
+  "expire": 1
+}
+
+### добавления повторного coupon
+POST http://localhost:8085/CouponManagerExecutor/coupon
+content-type: application/json
+
+{
+  "name": "Пукин",
+  "company": "Кока-Кола",
+  "expire": 1
+}
+
+
+
+### удаления coupon
+DELETE http://localhost:8085/CouponManagerExecutor/coupon?couponId=15
+### удаления company
+DELETE http://localhost:8085/CouponManagerExecutor/coupon?companyId=3
+
+### ошибка удаления coupon: coupon с таким id не существует
+DELETE http://localhost:8085/CouponManagerExecutor/coupon?couponId=1
+### ошибка удаления company: company с таким id не существует
+DELETE http://localhost:8085/CouponManagerExecutor/coupon?companyId=3
+### ошибка удаления coupon: некорректный формат coupon id
+DELETE http://localhost:8085/CouponManagerExecutor/coupon?couponId=100ь
+### ошибка удаления company: Некорректный формат company id
+DELETE http://localhost:8085/CouponManagerExecutor/coupon?companyId=3а
+
+
+
+### получение coupon
+GET http://localhost:8085/CouponManagerExecutor/coupon?couponId=5
+
+### получение company
+GET http://localhost:8085/CouponManagerExecutor/coupon?company=Apple
+
+### получение срок действия которых оканчивается сегодня
+GET http://localhost:8085/CouponManagerExecutor/coupon?today
+
+
+### получение ошибки coupon: Некорректный формат id
+GET http://localhost:8085/CouponManagerExecutor/coupon?couponId
+### получение ошибки сoupon:"Coupon не найден"
+GET http://localhost:8085/CouponManagerExecutor/coupon?couponId=100
+### получение ошибки company:"Company не найден"
+GET http://localhost:8085/CouponManagerExecutor/coupon?company=1521

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdullaevaziz.studentsfx.controllers.studentcontrollers.UpdateStudentController">
+   <children>
+      <Label fx:id="idLabel" layoutX="14.0" layoutY="60.0" prefHeight="31.0" prefWidth="149.0" text="ID student" />
+      <TextField fx:id="idTextField" disable="true" layoutX="14.0" layoutY="104.0" />
+      <Label layoutX="205.0" layoutY="8.0" prefHeight="31.0" prefWidth="181.0" text="Ввод данных студента" />
+      <Label fx:id="fioLabel" layoutX="352.0" layoutY="60.0" prefHeight="31.0" prefWidth="149.0" text="FIO student" />
+      <TextField fx:id="fioTextField" layoutX="352.0" layoutY="104.0" />
+      <Label fx:id="AgeLabel" layoutX="14.0" layoutY="151.0" prefHeight="31.0" prefWidth="149.0" text="Age student" />
+      <TextField fx:id="ageTextField" layoutX="14.0" layoutY="188.0" />
+      <Label fx:id="numberLabel" layoutX="352.0" layoutY="151.0" prefHeight="31.0" prefWidth="149.0" text="Number student" />
+      <TextField fx:id="numberTextField" disable="true" layoutX="352.0" layoutY="188.0" />
+      <Label fx:id="SalaryLabel" layoutX="352.0" layoutY="243.0" prefHeight="31.0" prefWidth="149.0" text="Salary student" />
+      <TextField fx:id="salaryTextField" layoutX="352.0" layoutY="274.0" />
+      <Button layoutX="14.0" layoutY="271.0" mnemonicParsing="false" onAction="#closeButton" prefHeight="31.0" prefWidth="149.0" text="Close" />
+   </children>
+</AnchorPane>

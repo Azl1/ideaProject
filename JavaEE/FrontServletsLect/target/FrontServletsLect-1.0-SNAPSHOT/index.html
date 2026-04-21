@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Part-List</title>
+    <script src="scripts/jQuery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/paging.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+
+    <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+
+
+<table class="table table-bordered table-hover horizontal-align">
+    <thead class="table-dark">
+    <tr>
+        <th>Name</th>
+        <th>Need</th>
+        <th>Count</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<div id="pagination" style="text-align: right;"></div>
+
+<p id="counts">This is simple text</p>
+
+
+<!-- Button trigger modal add-->
+<div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddPart">
+        Add new part
+    </button>
+    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalSearchPart">
+        Search part
+    </button>
+</div>
+
+<!-- Modal Add New Part-->
+<div class="modal fade" id="modalAddPart" tabindex="-1" aria-labelledby="addNewPartModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addNewPartModalLabel">Add new part</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="add_part_name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="add_part_name" aria-describedby="Name">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="add_part_need">
+                        <label class="form-check-label" for="add_part_need">Need</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="add_part_count" class="form-label">Count</label>
+                        <input type="number" class="form-control" id="add_part_count">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="add_part_button">Send</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Change Part-->
+<div class="modal fade" id="modalChangePart" tabindex="-1" aria-labelledby="changePartModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changePartModalLabel">Change part</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="number" id="change_part_id" hidden>
+                    <div class="mb-3">
+                        <label for="change_part_name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="change_part_name" aria-describedby="Name">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="change_part_need">
+                        <label class="form-check-label" for="change_part_need">Need</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="change_part_count" class="form-label">Count</label>
+                        <input type="number" class="form-control" id="change_part_count">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="change_part_button">Send</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Search Part-->
+<div class="modal fade" id="modalSearchPart" tabindex="-1" aria-labelledby="searchPartModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchPartModalLabel">Search part</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="search_part_name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="search_part_name" aria-describedby="Name">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="search_part_need">
+                        <label class="form-check-label" for="search_part_need">Need</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="search_part_count" class="form-label">Count</label>
+                        <input type="number" class="form-control" id="search_part_count">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="search_part_button">Search</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    showParts();
+</script>
+
+</body>
+</html>

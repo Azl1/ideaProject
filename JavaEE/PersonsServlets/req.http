@@ -1,0 +1,44 @@
+###
+POST localhost:8082/PersonsServlets/person
+content-type: application/json
+
+{
+ "id": 1,
+ "name": "Иван",
+ "family": "Иванов",
+ "age": 20,
+ "numberPhone": 856789,
+ "mail": "sobaka@mail.ru"
+}
+
+###
+POST localhost:8082/PersonsServlets/person
+content-type: application/json
+
+{
+ "id": 2,
+ "name": "Сидор",
+ "family": "Сидоров",
+ "age": 25,
+ "numberPhone": 87788,
+ "mail": "belka@gmail.com"
+}
+
+###
+PUT localhost:8082/PersonsServlets/person
+content-type: application/json
+
+{
+  "id": 3,
+ "name": "Петр",
+ "family": "Петров",
+ "age": 21,
+ "numberPhone": 875721,
+ "mail": "lobaka@yandex.ru"
+}
+
+###
+GET localhost:8082/PersonsServlets/person?id=100
+
+###
+DELETE localhost:8082/PersonsServlets/person?id=л

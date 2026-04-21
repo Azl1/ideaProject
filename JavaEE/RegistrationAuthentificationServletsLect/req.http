@@ -1,0 +1,20 @@
+###
+POST localhost:8082/RegistrationAuthentificationServletsLect/user
+content-type:application/json
+
+{
+  "login": "Log",
+  "password": "Pass"
+}
+
+###
+GET localhost:8082/RegistrationAuthentificationServletsLect/user?login=Login&password=Password
+
+###
+GET localhost:8082/RegistrationAuthentificationServletsLect/user
+
+###
+DELETE localhost:8082/RegistrationAuthentificationServletsLect/user?id=7
+
+###
+DELETE localhost:8082/RegistrationAuthentificationServletsLect/user?id=vc
