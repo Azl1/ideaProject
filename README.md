@@ -36,3 +36,39 @@ DELETE /files/{id}
 1. Клонировать репозиторий
 2. Настроить application.properties
 3. Запустить Spring Boot приложение
+
+# Quiz System
+
+Backend для системы тестирования пользователей.
+
+## 🚀 Стек
+- Java
+- Spring Boot
+- JPA / Hibernate
+- MySQL / PostgreSQL
+
+## ⚙️ Функционал
+- CRUD для вопросов и ответов
+- Хранение результатов тестирования
+- Подсчёт результатов
+- REST API
+
+## 📌 Примеры API
+POST /quiz  
+GET /questions  
+POST /answers  
+GET /results
+
+
+# Telegram Bot
+
+Telegram-бот для обработки пользовательских команд.
+
+## 🚀 Стек
+- Java
+- Telegram Bot API
+
+## ⚙️ Функционал
+- Обработка команд (/start, /help)
+- Ответы пользователю
+- Интеграция с backend API
